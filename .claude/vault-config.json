@@ -1,0 +1,30 @@
+{
+  "user": {
+    "name": "Toni Alatalo",
+    "background": {
+      "github": "antont",
+      "organizations": ["realXtend", "Playsign", "Oulu-UCC"],
+      "expertise": ["Python", "Virtual worlds", "3D/WebXR", "AI/LLMs", "Open source"],
+      "location": "Finland"
+    },
+    "socialLinks": {
+      "github": "https://github.com/antont",
+      "mastodon": "@antont@mastodon.online",
+      "twitter": "@an_toni",
+      "bluesky": "bsky.an.org"
+    },
+    "publicProfile": true
+  },
+  "vaultPath": "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/an",
+  "organizationMethod": "PARA",
+  "primaryUses": ["research", "writing", "project-management"],
+  "projects": ["PolicyVote"],
+  "areas": [],
+  "resources": [],
+  "tools": {
+    "geminiVision": false,
+    "firecrawl": false
+  },
+  "importedAt": "2026-01-03",
+  "lastUpdated": "2026-01-03"
+}

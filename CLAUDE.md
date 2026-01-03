@@ -1,0 +1,191 @@
+# Obsidian Vault Configuration for Toni Alatalo
+
+**Generated on:** January 03, 2026
+**Last updated:** January 03, 2026
+**Organization method:** PARA
+**Primary uses:** Research, Writing, Project Management
+
+---
+
+## About You
+
+- **Name:** Toni Alatalo
+- **GitHub:** [@antont](https://github.com/antont)
+- **Location:** Finland
+- **Organizations:** realXtend, Playsign, Oulu-UCC
+- **Expertise:** Python, Virtual worlds/3D/WebXR, AI/LLMs, Open source development
+
+---
+
+## Quick Start
+
+1. **Start every session**: Run `git pull` to sync latest changes
+2. **After changes**: Commit and push to preserve your work
+3. **Use built-in tools**: Prefer WebSearch and WebFetch for web content
+
+---
+
+## Your Folder Structure (PARA Method)
+
+```
+second-brain/
+├── 00_Inbox/              # Temporary capture point
+├── 01_Projects/           # Time-bound initiatives
+│   └── PolicyVote/        # Your active project
+│       ├── Research/
+│       ├── Drafts/
+│       └── Output/
+├── 02_Areas/              # Ongoing responsibilities (add as needed)
+├── 03_Resources/          # Reference materials (add as needed)
+├── 04_Archive/            # Completed/inactive items
+├── 05_Attachments/        # Images, PDFs, etc.
+│   └── Organized/         # Processed attachments
+├── 06_Metadata/           # Documentation & templates
+│   ├── Reference/
+│   ├── Plans/
+│   └── Templates/
+└── OLD_VAULT/             # Imported from iCloud vault
+```
+
+---
+
+## Version Control
+
+**CRITICAL - START EVERY SESSION**: Always run `git pull` at the beginning of each new Claude session.
+
+**Commit workflow**:
+- After creating new notes: `git add .` → `git commit -m "message"` → `git push`
+- After significant edits: Commit and push immediately
+- Use `git status` to check for modifications
+
+---
+
+## PARA Method Details
+
+### Projects (01)
+- Time-bound initiatives with clear completion criteria
+- **Your current project:** PolicyVote
+- Recommended subfolders: Research/, Drafts/, Output/
+
+### Areas (02)
+- Ongoing responsibilities without end dates
+- Add folders as needed for: Work, Health, Finances, etc.
+
+### Resources (03)
+- Topics of interest for reference
+- Add folders for research topics like: AI/LLMs, Virtual Worlds, Python, etc.
+
+### Archive (04)
+- Completed or inactive items
+- Move entire project folders here when done
+
+---
+
+## Inbox Management
+
+### Core Principles
+- Inbox is temporary, not permanent storage
+- Process weekly using Capture → Process → Organize workflow
+- Maintain <20 items at any time
+
+### Processing Workflow
+1. Delete obsolete information
+2. Move relevant material to PARA locations
+3. Convert actions into project tasks
+4. Tag items needing more processing with `#needs-processing`
+
+---
+
+## File Naming Conventions
+
+- Daily notes: `YYYY-MM-DD - Topic`
+- Meeting notes: `Meeting - [Topic] - YYYY-MM-DD`
+- Ideas: `Idea - [Brief Description]`
+- Resources: `Resource - [Topic] - [Source]`
+
+---
+
+## Helper Scripts
+
+```bash
+pnpm vault:stats           # Show vault statistics
+pnpm attachments:list      # List unprocessed files
+pnpm attachments:organized # Count organized files
+pnpm attachments:orphans   # Find unreferenced files
+```
+
+---
+
+## Available Slash Commands
+
+- `/setup-gemini` - Configure Gemini Vision for image/PDF analysis
+- `/setup-firecrawl` - Configure Firecrawl for web research
+- `/init-bootstrap` - Re-run this setup wizard
+
+---
+
+## Writing Style Guidelines
+
+### Structure
+- Use `[[WikiLinks]]` for internal references
+- Include YAML frontmatter (dates, tags, status)
+- Consistent Markdown formatting
+
+### Style
+- Direct and confident statements
+- Avoid clichéd transitions
+- Let statements stand on their own
+
+---
+
+## AI Assistant Guidelines
+
+### Before Any Organization
+1. Map complete folder structure: `find . -type d | sort`
+2. Verify all destination folders exist
+
+### Working with Content
+- Respect numbered core files (never move 00-06 prefixed files)
+- Always use `mv` not `cp` when organizing
+- Preserve and update bidirectional links
+- Add appropriate YAML frontmatter
+
+### Simple Commands Only
+- **REQUIRED**: Direct, basic commands without filtering
+- **FORBIDDEN**: Complex regex, piped commands, find with filters
+
+---
+
+## Daily Workflows
+
+### Start of Day
+1. Run `git pull`
+2. Check inbox for items to process
+3. Review active projects
+
+### End of Day
+1. Process new inbox items
+2. Commit and push changes
+3. Update project notes
+
+### Weekly Review
+1. Process entire inbox
+2. Archive completed projects
+3. Update area notes
+4. Review and consolidate resources
+
+---
+
+## Setup Summary
+
+- [x] Dependencies installed (pnpm)
+- [x] Repository disconnected from original claudesidian
+- [x] GitHub workflows removed
+- [x] iCloud vault imported to OLD_VAULT/
+- [x] PARA folder structure ready
+- [ ] Gemini Vision (run `/setup-gemini` when ready)
+- [ ] Firecrawl (run `/setup-firecrawl` when ready)
+
+---
+
+*Configuration generated by claudesidian bootstrap. Edit this file to customize your workflow.*

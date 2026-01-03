@@ -8,8 +8,7 @@
 *secret*
 firecrawl_config.sh
 
-# Claude files
-CLAUDE.md
+# Claude files (local settings only)
 .claude/settings.local.json
 
 # MCP config
