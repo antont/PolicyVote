@@ -41,8 +41,14 @@ This allows both engaged citizens to vote granularly and busy voters to delegate
 ### Technical infrastructure
 Centralized government system, managed by existing election authorities (e.g., Oikeusministeriö).
 
-### Accessibility
-Paper-based voting preserved. Digital voting as additional channel, not replacement. Maintains current Finnish accessibility standards.
+### Security and integrity (Finland context)
+Paper-based voting preserved for fundamental security reasons that digital systems cannot fully address. These concerns were highlighted in a [Finnish government report on digital voting (2017)](https://api.hankeikkuna.fi/asiakirjat/281c16de-87a0-4d48-a654-527ea93aec70/40e845f9-de05-4127-8ff5-7f052c90dc1c/RAPORTTI_20171219234502.pdf):
+
+1. **Coercion resistance**: Physical voting at official locations with private booths ensures no one can force or verify how another person voted
+2. **Audit trail**: Paper ballots enable recounts and independent verification of results
+3. **No single point of failure**: Distributed physical process harder to manipulate at scale than centralized digital systems
+
+Digital voting may serve as supplementary channel for specific use cases, but paper remains the foundation. This also maintains accessibility for those without digital access.
 
 ## Handling Conflicts
 
