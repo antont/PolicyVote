@@ -4,6 +4,123 @@ Political parties would still develop election programs containing policy propos
 
 The approach aims to create a clearer connection between voter intent and political outcomes. Modern information technology could potentially enable the implementation and management of such a system at scale.
 
+## The Real Goal: Changing Political Culture
+
+The primary goal of PolicyVote is not just a different voting mechanism - it's a fundamental shift in how politics is framed and practiced.
+
+### Problems with Person-Centered Politics
+
+Current electoral systems are extremely focused on individuals - candidates and representatives. This creates dysfunction:
+
+**Campaigns become self-promotion**
+- Candidates compete for visibility and "good vibes"
+- Substance takes a back seat to personal branding
+- Election debates often devolve into defaming opponents
+
+**Wrong people enter politics**
+- System selects for those who want attention and recognition
+- People who might have good policy ideas but dislike self-promotion stay away
+- "Getting hooked to the attention" becomes a prerequisite
+
+**Zero-sum dynamics**
+- To get a vote, you must take it from someone else
+- Creates adversarial rather than collaborative politics
+- Shared good ideas across parties become threats rather than opportunities
+
+**Behavior during term**
+- Re-election concerns shape how MPs act
+- Focus on maintaining personal profile rather than implementing good policy
+- Media treats politics as personality drama
+
+### How Policy-Centered Framing Could Change Everything
+
+When voting is explicitly about issues rather than people:
+
+**Campaigns shift to substance**
+- Parties compete on policy proposals, not candidate charisma
+- Vaaliohjelma (election program) becomes the actual product
+- Debates focus on "what should we do about X?" not "who do you trust?"
+
+**Different people engage**
+- Policy experts and issue advocates can influence outcomes
+- Don't need to enjoy spotlight to shape politics
+- Reduces barrier for people with good ideas but no desire for fame
+
+**Non-zero-sum possibilities**
+- Multiple parties supporting the same policy strengthens it
+- Cross-party consensus becomes visible and powerful
+- Cooperation becomes strategically viable
+
+**Changed incentives during term**
+- Representatives have specific mandates to implement
+- Accountability is about policy outcomes, not personal popularity
+- Media can track "did policy X get implemented?" rather than personality stories
+
+**Media coverage transforms**
+- Stories become "here's what citizens voted for on healthcare" not "here's what politician Y said about politician Z"
+- Policy tracking replaces horse-race coverage
+- Substance becomes more newsworthy than drama
+
+### This Is the Core Innovation
+
+The voting mechanism matters, but **the framing shift is the real intervention**. PolicyVote is designed to make it natural - even unavoidable - for political discourse to center on policies rather than personalities.
+
+## System Architecture
+
+PolicyVote separates two distinct functions that are often conflated in democratic systems:
+
+### 1. Deliberation Phase
+
+**Purpose**: Develop and refine policy proposals before they become voting options.
+
+**Characteristics**:
+- Advisory, exploratory
+- Consensus-finding (Pol.is-style)
+- Open to parties, citizens, experts
+- Can surface when a question is framed wrong
+- Cross-party collaboration possible
+
+**Activities**:
+- Parties develop their election programs (vaaliohjelmat)
+- Citizens contribute ideas and feedback
+- Experts provide technical input
+- Conflicts and trade-offs are explored
+- Proposals are refined for clarity and actionability
+
+**Tools**: Platforms like Pol.is that enable productive discussion without flame wars (no reply button, opinion clustering, consensus visualization).
+
+### 2. Voting Phase
+
+**Purpose**: Create binding mandates from refined policy options.
+
+**Characteristics**:
+- Binding, decisive
+- Creates constitutional mandate
+- Representatives accountable to results
+- Clear yes/no/preference expression
+
+**This is the PolicyVote mechanism** described in detail below.
+
+### 3. Interface: Deliberation → Voting
+
+Policy proposals need a clear pathway from exploratory deliberation to binding vote. This interface determines which proposals become voting options.
+
+**Possible mechanisms**:
+
+| Mechanism | Description | Pros | Cons |
+|-----------|-------------|------|------|
+| **Party gatekeeping** | Parties decide which proposals from deliberation enter their programs | Maintains party coherence | Parties can ignore popular ideas |
+| **Threshold qualification** | Proposals reaching consensus threshold in deliberation automatically qualify for ballot | Direct citizen pathway | Could flood ballot with proposals |
+| **Hybrid** | Parties curate + citizen-initiated proposals with signature threshold | Balance of structure and openness | More complex |
+
+**Interface requirements**:
+- Traceability: voters can see where a proposal came from and how it was refined
+- Quality control: proposals must be concrete, actionable, legally feasible
+- Conflict pre-check: proposals flagged if they contradict existing law or other proposals
+
+> [!note] Open question
+> What threshold or process should determine when a deliberated proposal becomes a voting option? How to balance accessibility with preventing ballot overload?
+
 ## Voting Mechanism
 
 ### Basic vote model
