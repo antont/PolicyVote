@@ -80,45 +80,41 @@ Universal Basic Income (perustulo) illustrates the structural problems of person
 
 ### The Current Situation
 
-At least two Finnish parties—Vihreät (Green League) and Vasemmistoliitto (Left Alliance)—include basic income in their election programs. Polls suggest substantial public interest, and Finland conducted a government-sponsored basic income experiment in 2017-2018.
+Several Finnish parties include some form of basic income in their programs: Vihreät (Green League), Vasemmistoliitto (Left Alliance), and Liberaalit (Liberal Party) clearly support it. SDP, Keskusta, and even some in Kokoomus have expressed varying degrees of openness. Finland conducted a government-sponsored basic income experiment in 2017-2018.
 
 Yet UBI remains perpetually "on the agenda" without democratic resolution. Why?
 
-**Cross-party support is invisible.** Even if 55% of Finnish citizens support UBI, this doesn't create a mandate if those citizens are distributed across multiple parties. Each voter must choose a full party package; their specific UBI preference has no direct expression.
+**Cross-party support is invisible.** Even if a majority of Finnish citizens support UBI, this doesn't create a mandate when those citizens are distributed across multiple parties. Each voter must choose a full party package; their specific UBI preference has no direct expression.
 
 **Coalition dynamics determine outcomes.** Whether UBI advances depends on which parties form a government and what they trade away in negotiations—not on aggregate citizen preference.
 
 **The mandate is unclear.** If parties supporting UBI get 40% of votes collectively, what mandate exists? Post-election, UBI competes with every other party priority.
 
-### Under PolicyVote: A Simulation
+### Under PolicyVote: A Thought Experiment
 
-We simulated how the same policy environment would function under PolicyVote. ([Full simulation details available here.](../Research/Case%20Study%20-%20UBI%20in%20Finland.md))
+Imagine how the same policy environment might function under PolicyVote. ([Full thought experiment here.](../Research/Case%20Study%20-%20UBI%20in%20Finland.md))
 
-**Deliberation phase** revealed that the population isn't neatly divided into "pro-UBI" and "anti-UBI" camps. A substantial middle exists—people open to various reform models. Consensus emerged on problems (bureaucracy, poverty traps) even where solutions differed.
+**Deliberation phase** might reveal that the population isn't neatly divided into "pro-UBI" and "anti-UBI" camps. A substantial middle could exist—people open to various reform models. Consensus might emerge on problems (bureaucracy, poverty traps) even where solutions differ.
 
-**Voting phase** produced specific results:
+**Voting phase** would produce specific results. Imagine something like:
+- A conditional basic income model receives moderate positive support
+- A UBI pilot proposal receives weaker but still positive support
+- Status quo options receive net negative support
 
-| Proposal | Net Support |
-|----------|-------------|
-| Conditional Basic Income (€600/month with activity requirements) | +21% |
-| UBI Pilot (€800/month unconditional, 50,000 citizens) | +9% |
-| Status quo with improvements | -11% |
-| No expansion of social security | -38% |
+**Key insight**: Suppose roughly a third of voters support *both* a conditional model and a UBI pilot—they want reform but are flexible on the form. Under the current system, this substantial middle is invisible, split across party votes. Under PolicyVote, it would become a clear mandate for some form of basic income reform.
 
-**Key finding**: 31% of simulated voters supported *both* the conditional model and the UBI pilot—they want reform but are flexible on the form. Under the current system, this substantial middle is invisible, split across party votes. Under PolicyVote, it becomes a clear mandate for some form of basic income reform.
-
-**The mandate** is specific: implement conditional basic income, with openness to piloting unconditional models. Parliament knows exactly what citizens voted for. A transparency dashboard tracks implementation. Accountability is concrete.
+**The mandate** would be specific: implement the reform model with strongest support. Parliament knows exactly what citizens voted for. A transparency dashboard tracks implementation. Accountability becomes concrete.
 
 ### What Changes
 
 | Aspect | Current System | PolicyVote |
 |--------|---------------|------------|
-| Mandate | "Party X got 10%" | "52% support conditional BI" |
+| Mandate | "Party X got 10%" | "Majority supports reform model Y" |
 | Cross-party support | Hidden in party bundles | Visible and actionable |
 | Coalition leverage | UBI tradeable for other priorities | Mandate exists regardless of coalition |
 | Accountability | "Party broke promises" | Dashboard tracks specific implementation |
 
-The simulation is illustrative, not predictive. Real dynamics would differ. But it demonstrates how structural change affects which questions get asked and which answers become possible.
+This thought experiment is illustrative, not predictive. Real dynamics would differ. But it demonstrates how structural change affects which questions get asked and which answers become possible.
 
 ---
 
@@ -164,12 +160,12 @@ This is a proposal, not a finished system. Key open questions include:
 
 5. **Political path.** Who would support this reform? How does it get from proposal to implementation?
 
-I'm developing this concept openly and welcome feedback. The [full documentation](https://github.com/user/repo), including detailed mechanism design, research on related systems, and comparative analysis, is available for review and contribution.
+I'm developing this concept openly and welcome feedback. The [full documentation](https://github.com/antont/PolicyVote/tree/main/01_Projects/PolicyVote), including detailed mechanism design, research on related systems, and comparative analysis, is available for review and contribution.
 
 The goal is not to prescribe a specific implementation, but to explore whether reframing the fundamental question of elections—from "who" to "what"—could address dysfunctions that incremental reforms cannot reach.
 
 ---
 
-*[Author bio / contact information]*
+*Toni Alatalo*
 
 *This work is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Comments, critiques, and contributions welcome.*

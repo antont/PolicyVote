@@ -1,25 +1,27 @@
-# Case Study: Universal Basic Income in Finnish Elections
+# Thought Experiment: Universal Basic Income in Finnish Elections
 
-*A simulation of how PolicyVote would handle a cross-party policy proposal*
+*Exploring how PolicyVote might handle a cross-party policy proposal*
 
 ---
 
 ## Background
 
-Universal Basic Income (perustulo) has been part of Finnish political discourse for decades. Finland conducted a government-sponsored basic income experiment in 2017-2018, providing €560/month to 2,000 unemployed citizens. The experiment generated significant data and international attention.
+Universal Basic Income (perustulo) has been part of Finnish political discourse for decades. Finland conducted a government-sponsored basic income experiment in 2017-2018, providing €560/month to 2,000 unemployed citizens. The experiment generated data and international attention, though findings were mixed and subject to ongoing debate.
 
-As of 2024-2025, at least two Finnish parties include some form of basic income in their election programs:
+As of 2024-2025, several Finnish parties include some form of basic income in their election programs:
+
+**Clear support:**
 - **Vihreät (Green League)**: Long-standing support for basic income as part of social security reform
 - **Vasemmistoliitto (Left Alliance)**: Advocates for basic income as path to more equitable society
+- **Liberaalit (Liberal Party)**: Supports UBI; no parliamentary seats but votes count in elections
 
-> [!note] Verify
-> Please confirm which parties currently have UBI in their programs and their specific proposals.
-
-Other parties have varying positions:
+**Mixed or partial support:**
 - **SDP**: Has expressed openness to basic income models in some forms
-- **Keskusta (Centre Party)**: Initiated the 2017-2018 experiment; mixed support currently
-- **Kokoomus (National Coalition)**: Generally skeptical, prefers targeted benefits
-- **Perussuomalaiset (Finns Party)**: Generally opposed
+- **Keskusta (Centre Party)**: Initiated the 2017-2018 experiment; position varies
+- **Kokoomus (National Coalition)**: Some internal support exists; party officially prefers targeted benefits
+
+**Generally opposed:**
+- **Perussuomalaiset (Finns Party)**: Opposed to expanding social security in this direction
 
 ---
 
@@ -50,11 +52,13 @@ In Finland's current electoral system (proportional representation with party li
 
 ### Result
 
-Despite substantial public interest and a successful experiment, UBI remains perpetually "on the agenda" without clear democratic resolution. The issue is hostage to coalition dynamics, party priorities, and the personal preferences of whoever ends up in government.
+Despite substantial public interest and real-world experimentation, UBI remains perpetually "on the agenda" without clear democratic resolution. The issue is hostage to coalition dynamics, party priorities, and the personal preferences of whoever ends up in government.
 
 ---
 
-## PolicyVote Simulation: The Same Election, Different Structure
+## PolicyVote Thought Experiment: The Same Election, Different Structure
+
+> **Note**: The following is a thought experiment with illustrative numbers, not a prediction. The specific percentages are plausible but invented to demonstrate how the structure would work. The value is in understanding the *type* of outcomes that become possible, not the exact figures.
 
 ### Phase 1: Deliberation
 
@@ -129,13 +133,14 @@ Citizens vote on each proposal (support/oppose/abstain). They can also adopt par
 | C: Status Quo+ | 34% | 45% | 21% | -11% |
 | D: No Expansion | 23% | 61% | 16% | -38% |
 
-**Cross-tabulation reveals**:
-- 31% support BOTH Proposal A and B (open to either approach)
-- 12% support A but oppose B (want unconditional only)
-- 18% support B but oppose A (want conditions)
-- 24% oppose both A and B
+**Cross-tabulation reveals** (illustrative):
+- ~30% support BOTH Proposal A and B (open to either approach)
+- ~15% support A but oppose B (want unconditional only)
+- ~20% support B but oppose A (want conditions)
+- ~25% oppose both A and B
+- ~10% abstain or support only C/D
 
-**Key insight**: The population isn't neatly divided into "pro-UBI" and "anti-UBI." There's a large middle that supports *some* form of basic income reform, with preferences on the specific model.
+**Key insight**: The population isn't neatly divided into "pro-UBI" and "anti-UBI." A substantial middle exists that supports *some* form of basic income reform, with varying preferences on the specific model. This middle is invisible in the current system.
 
 ### Phase 4: Mandate Creation
 
@@ -193,11 +198,11 @@ MP Compliance:
 
 ---
 
-## Lessons from This Simulation
+## Lessons from This Thought Experiment
 
 ### 1. Cross-party consensus becomes actionable
 
-In this simulation, 31% of voters supported both the UBI pilot AND the conditional model. Under the current system, these voters are split between parties and their shared preference for "some form of basic income reform" has no political expression. Under PolicyVote, this preference becomes a strong mandate for reform.
+In this scenario, roughly a third of voters supported both the UBI pilot AND the conditional model. Under the current system, these voters are split between parties and their shared preference for "some form of basic income reform" has no political expression. Under PolicyVote, this preference becomes a strong mandate for reform.
 
 ### 2. Deliberation changes the question
 
@@ -213,34 +218,39 @@ Under the current system, UBI could be traded away in coalition talks even if pa
 
 ### 5. The "middle" is larger than it appears
 
-Political discourse often presents UBI as a polarizing issue. This simulation suggests a substantial middle exists—people open to various reform models. PolicyVote makes this middle visible and politically relevant.
+Political discourse often presents UBI as a polarizing issue. This thought experiment suggests a substantial middle may exist—people open to various reform models. PolicyVote would make this middle visible and politically relevant.
 
 ---
 
-## Limitations of This Simulation
+## Limitations of This Thought Experiment
 
-**This is illustrative, not predictive.** Real participation rates, voting patterns, and deliberation dynamics would differ. The numbers are plausible but invented.
+**This is illustrative, not predictive.** Real participation rates, voting patterns, and deliberation dynamics would differ. The numbers are plausible but invented to demonstrate structure, not forecast outcomes.
 
 **Simplifications**:
 - Real proposals would have more detail and more options
 - Deliberation dynamics are complex and unpredictable
 - Implementation challenges not fully modeled
 - Conflict with other mandates not addressed
+- Assumes higher participation than current digital democracy experiments typically achieve
 
 **What it demonstrates**:
 - How the structure changes incentives and outcomes
 - Why cross-party policy consensus matters
 - What specific accountability could look like
+- The *type* of information that becomes available to citizens and representatives
 
 ---
 
-## Next Steps for This Case Study
+## Possible Future Development
 
-1. **Verify party positions**: Confirm current Finnish party UBI stances
-2. **Real deliberation data**: Could analyze actual Finnish discourse on UBI
-3. **Survey validation**: Test whether simulated preference distributions match reality
+This thought experiment could evolve into a more rigorous simulation:
+
+1. **Ground in polling data**: Use actual Finnish survey data on UBI support
+2. **Analyze real deliberation**: Study existing Finnish discourse on UBI (media, party programs, citizens' initiative data)
+3. **Model with realistic parameters**: Base participation rates on vTaiwan, Swiss referendum, and Finnish election data
 4. **Expert review**: Get feedback from Finnish political scientists
+5. **Interactive version**: Build a tool where users can explore different scenarios
 
 ---
 
-*Simulation created January 2026. For methodology and assumptions, see [full documentation](link).*
+*Thought experiment created January 2026.*
