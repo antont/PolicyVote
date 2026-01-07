@@ -92,7 +92,7 @@ Yet UBI remains perpetually "on the agenda" without democratic resolution. Why?
 
 ### Under PolicyVote: A Simulation
 
-We simulated how the same policy environment would function under PolicyVote. ([Full simulation details available here.](Research/Case%20Study%20-%20UBI%20in%20Finland.md))
+We simulated how the same policy environment would function under PolicyVote. ([Full simulation details available here.](../Research/Case%20Study%20-%20UBI%20in%20Finland.md))
 
 **Deliberation phase** revealed that the population isn't neatly divided into "pro-UBI" and "anti-UBI" camps. A substantial middle exists—people open to various reform models. Consensus emerged on problems (bureaucracy, poverty traps) even where solutions differed.
 
