@@ -166,6 +166,15 @@ The goal is not to prescribe a specific implementation, but to explore whether r
 
 ---
 
+## References and Further Reading
+
+- [Pol.is](https://pol.is) — Consensus-finding deliberation platform
+- [vTaiwan](https://info.vtaiwan.tw/) — Taiwan's digital democracy initiative
+- [UBI Case Study (thought experiment)](../Research/Case%20Study%20-%20UBI%20in%20Finland.md) — Detailed walkthrough using Finnish basic income debate
+- [Full PolicyVote documentation](https://github.com/antont/PolicyVote/tree/main/01_Projects/PolicyVote) — Mechanism design, research, and comparative analysis
+
+---
+
 *Toni Alatalo*
 
 *This work is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Comments, critiques, and contributions welcome.*
