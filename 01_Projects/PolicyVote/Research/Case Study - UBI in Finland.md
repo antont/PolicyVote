@@ -6,14 +6,14 @@
 
 ## Background
 
-Universal Basic Income (perustulo) has been part of Finnish political discourse for decades. Finland conducted a government-sponsored basic income experiment in 2017-2018, providing €560/month to 2,000 unemployed citizens. The experiment generated data and international attention, though findings were mixed and subject to ongoing debate.
+Universal Basic Income (perustulo) has been part of Finnish political discourse for decades. Finland conducted a government-sponsored basic income experiment in 2017-2018, providing €560/month to 2,000 unemployed citizens. According to Kela, employment effects were modest, but participants reported greater life satisfaction and less psychological stress than the control group. ([Source: Uusi Suomi, Jan 2026](scrape-vihreat-ubi-2025.md))
 
-As of 2024-2025, several Finnish parties include some form of basic income in their election programs:
+As of 2024-2026, several Finnish parties include some form of basic income in their election programs:
 
 **Clear support:**
-- **Vihreät (Green League)**: Long-standing support for basic income as part of social security reform
-- **Vasemmistoliitto (Left Alliance)**: Advocates for basic income as path to more equitable society
-- **Liberaalit (Liberal Party)**: Supports UBI; no parliamentary seats but votes count in elections
+- **Vihreät (Green League)**: 2019 model proposed €600/month unconditional basic income, to be implemented in two parliamentary terms. In January 2026, parliamentary group chair Oras Tynkkynen proposed a new experiment inspired by Ireland's "Basic Income for the Arts" pilot (€1,300/month to ~2,000 artists, 2022-2025). ([Source: vihreat.fi/perustulo](scrape-vihreat-perustulo-page.md), [Uusi Suomi Jan 2026](scrape-vihreat-ubi-2025.md))
+- **Vasemmistoliitto (Left Alliance)**: Party chair Li Andersson has called for a new basic income experiment. ([Source: Uusi Suomi](scrape-vihreat-ubi-2025.md))
+- **Liberaalit (Liberal Party)**: Party program (2024) states: "Sosiaaliturvassa on siirryttävä perustulo- tai perustilimalliin" (Social security should transition to basic income or basic account model). Lists support for the 2017-2018 experiment among their achieved policy goals. No parliamentary seats but votes count in elections. ([Source: liberaalipuolue.fi/puolueohjelma](scrape-liberaalit-puolueohjelma.md))
 
 **Mixed or partial support:**
 - **SDP**: Has expressed openness to basic income models in some forms
@@ -22,6 +22,16 @@ As of 2024-2025, several Finnish parties include some form of basic income in th
 
 **Generally opposed:**
 - **Perussuomalaiset (Finns Party)**: Opposed to expanding social security in this direction
+
+### The Ireland Reference (January 2026)
+
+Tynkkynen's January 2026 proposal references Ireland's "Basic Income for the Arts" experiment (2022-2025):
+- ~2,000 artists received €1,300/month unconditionally
+- Cost: €35 million/year gross, ~€20 million/year net (after increased tax revenue and reduced social spending)
+- Result: €1.40 in societal benefit for every €1 spent
+- Participants reported improved wellbeing and were able to focus better on their work
+
+Tynkkynen argues this provides evidence for a better-designed Finnish experiment to be included in the next government program. ([Source: Uusi Suomi, Jan 2026](scrape-vihreat-ubi-2025.md))
 
 ---
 
