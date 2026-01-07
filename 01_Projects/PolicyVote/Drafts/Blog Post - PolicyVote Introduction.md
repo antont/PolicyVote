@@ -134,17 +134,21 @@ PolicyVote addresses the structural incentives that make elections personality-f
 
 These are real challenges. They're also present in current electoral systems. The question is whether PolicyVote's tradeoffs are preferable—not whether it's perfect.
 
-## Why This Matters Now
+## Context and Existing Work
 
-Several converging factors make this worth serious consideration:
+PolicyVote builds on decades of democratic innovation. The pieces needed to make this work largely exist—they need integration and a shift in framing.
 
-**Digital infrastructure exists.** The technical barriers to policy-level voting and mandate tracking have largely fallen. Estonia's digital governance, Taiwan's civic tech, and Switzerland's direct democracy all provide relevant precedents.
+**Relevant precedents:**
+- **Switzerland** holds binding policy referendums roughly four times per year, demonstrating that citizens can vote directly on legislation at national scale
+- **vTaiwan** showed that digital deliberation can find consensus on divisive issues when designed correctly—removing reply features and visualizing opinion clusters shifts incentives from "winning arguments" to "attracting broad agreement"
+- **Liquid Democracy** (tested by Germany's Pirate Party and others) experimented with flexible vote delegation, but encountered problems: votes concentrated in "super-delegates" and the system remained person-centered
+- **Quadratic Voting** addresses preference intensity but doesn't change what elections are fundamentally about
 
-**Trust in representative democracy is declining.** Across democracies, citizens report feeling that elections don't translate into policy outcomes they want. This may be because elections aren't actually asking about policy outcomes.
+The core insight from reviewing this landscape: most democratic innovations optimize voting *mechanics* while leaving elections person-centered. PolicyVote attempts something different—shifting what elections are fundamentally *about*. Whether this framing change would actually reshape political culture is the key empirical question.
 
-**Political polarization follows predictable lines.** When competition is person-centered, tribal dynamics dominate. Policy-centered competition could reveal that apparent polarization obscures substantial agreement on specific issues.
+**Why consider this now?** Trust in representative democracy is declining across Western democracies. Citizens report that elections don't translate into policy outcomes they want—perhaps because elections aren't actually asking about policy outcomes. Meanwhile, the technical barriers have largely fallen: Estonia's digital governance, Finland's vaalikone (candidate matching tools), and Taiwan's civic tech all demonstrate relevant capabilities.
 
-**Existing tools demonstrate feasibility.** Vaalikone (candidate matching tools) already capture policy positions before elections. vTaiwan demonstrates scalable deliberation. Swiss referendums show direct policy voting works. The pieces exist; they need integration.
+For detailed analysis, see the [full literature review](../Research/Literature%20Review%20-%20Democratic%20Innovation.md) and [comparison with Liquid Democracy](../Research/Comparison%20-%20Liquid%20Democracy%20vs%20PolicyVote.md).
 
 ## Next Steps
 
@@ -168,10 +172,16 @@ The goal is not to prescribe a specific implementation, but to explore whether r
 
 ## References and Further Reading
 
+**Related systems:**
 - [Pol.is](https://pol.is) — Consensus-finding deliberation platform
 - [vTaiwan](https://info.vtaiwan.tw/) — Taiwan's digital democracy initiative
-- [UBI Case Study (thought experiment)](../Research/Case%20Study%20-%20UBI%20in%20Finland.md) — Detailed walkthrough using Finnish basic income debate
-- [Full PolicyVote documentation](https://github.com/antont/PolicyVote/tree/main/01_Projects/PolicyVote) — Mechanism design, research, and comparative analysis
+
+**PolicyVote documentation:**
+- [Literature Review](../Research/Literature%20Review%20-%20Democratic%20Innovation.md) — Survey of democratic innovations (liquid democracy, quadratic voting, direct democracy, etc.)
+- [Liquid Democracy Comparison](../Research/Comparison%20-%20Liquid%20Democracy%20vs%20PolicyVote.md) — Detailed analysis of similarities and differences
+- [vTaiwan Design Analysis](../Research/vTaiwan%20Design%20Analysis.md) — Lessons from Taiwan's digital democracy experiment
+- [UBI Case Study](../Research/Case%20Study%20-%20UBI%20in%20Finland.md) — Thought experiment using Finnish basic income debate
+- [Full repository](https://github.com/antont/PolicyVote/tree/main/01_Projects/PolicyVote) — All research, mechanism design, and source documents
 
 ---
 
