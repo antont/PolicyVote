@@ -7,8 +7,10 @@ flowchart LR
 
     subgraph policyvote["✅ PolicyVote"]
         direction TB
-        p_voter["Voter"] -->|"votes for"| p_policy["Policies"]
-        p_person["People"] -->|"implement"| p_policy
+        p_parties["Parties"] -->|"propose"| p_proposals["Proposals"]
+        p_voter["Voters"] -->|"support<br/>(cross-party)"| p_proposals
+        p_proposals -->|"become"| p_mandate["Mandate"]
+        p_mandate -->|"implemented by"| p_parliament["Parliament"]
     end
 
     current ~~~ policyvote
