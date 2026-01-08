@@ -42,6 +42,22 @@ The mechanics shift accordingly:
 
 - **Accountability is traceable.** Did the policy get implemented? Public dashboards can track legislative outcomes against the mandate. Deviation requires justification.
 
+```mermaid
+flowchart LR
+    subgraph current["❌ Current System"]
+        c_voter["Voter"] -->|"votes for"| c_person["Person"]
+        c_person -->|"decides"| c_policy["Policies"]
+    end
+
+    subgraph policyvote["✅ PolicyVote"]
+        p_voter["Voter"] -->|"votes for"| p_policy["Policies"]
+        p_person["People"] -->|"implement"| p_policy
+    end
+
+    style current fill:#ffeeee,stroke:#cc0000
+    style policyvote fill:#eeffee,stroke:#00cc00
+```
+
 ## How It Would Work
 
 PolicyVote separates the democratic process into distinct phases:

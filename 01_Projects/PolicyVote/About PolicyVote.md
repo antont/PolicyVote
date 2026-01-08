@@ -4,6 +4,44 @@ Political parties would still develop election programs containing policy propos
 
 The approach aims to create a clearer connection between voter intent and political outcomes. Modern information technology could potentially enable the implementation and management of such a system at scale.
 
+## Overview
+
+```mermaid
+flowchart TB
+    subgraph deliberation["**DELIBERATION PHASE**"]
+        direction TB
+        parties["🏛️ Political Parties<br/>develop proposals"]
+        citizens_d["👥 Citizens<br/>contribute ideas"]
+        experts["🎓 Experts<br/>provide analysis"]
+
+        parties --> proposals["📋 Policy Proposals"]
+        citizens_d --> proposals
+        experts --> proposals
+    end
+
+    subgraph voting["**VOTING PHASE**"]
+        direction TB
+        proposals --> ballot["🗳️ Ballot<br/><i>specific policy options</i>"]
+        citizens_v["👥 Citizens"] --> |"vote on<br/>POLICIES"|ballot
+        ballot --> mandates["✅ Binding Mandates<br/><i>with specific support levels</i>"]
+    end
+
+    subgraph implementation["**IMPLEMENTATION**"]
+        direction TB
+        mandates --> parliament["🏛️ Parliament<br/><i>implements mandates</i>"]
+        parliament --> outcomes["📊 Policy Outcomes"]
+        outcomes --> dashboard["📈 Transparency Dashboard<br/><i>tracks implementation</i>"]
+    end
+
+    dashboard -.->|"accountability<br/>feedback"| citizens_v
+
+    style deliberation fill:#e8f4e8,stroke:#2d5a2d
+    style voting fill:#e8e8f4,stroke:#2d2d5a
+    style implementation fill:#f4e8e8,stroke:#5a2d2d
+```
+
+*[Full diagrams](Diagrams/PolicyVote-Overview.md)*
+
 ## The Real Goal: Changing Political Culture
 
 The primary goal of PolicyVote is not just a different voting mechanism - it's a fundamental shift in how politics is framed and practiced.
