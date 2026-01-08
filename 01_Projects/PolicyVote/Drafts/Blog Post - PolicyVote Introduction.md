@@ -42,6 +42,8 @@ The mechanics shift accordingly:
 
 - **Accountability is traceable.** Did the policy get implemented? Public dashboards can track legislative outcomes against the mandate. Deviation requires justification.
 
+![PolicyVote concept: Voters and Parties both contribute to Proposals, which become Mandates in Parliament](../Diagrams/policyvote-concept.png)
+
 ```mermaid
 flowchart LR
     subgraph current["❌ Current System"]

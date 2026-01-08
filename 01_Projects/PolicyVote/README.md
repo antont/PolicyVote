@@ -6,6 +6,8 @@ Political parties would still develop election programs containing policy propos
 
 The approach aims to create a clearer connection between voter intent and political outcomes. Modern information technology could potentially enable the implementation and management of such a system at scale.
 
+![PolicyVote concept: Voters and Parties both contribute to Proposals, which become Mandates in Parliament](Diagrams/policyvote-concept.png)
+
 ## Overview
 
 ```mermaid
