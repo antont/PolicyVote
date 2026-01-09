@@ -84,11 +84,15 @@ Citizens vote on specific policies. The ballot might include proposals like "Est
 
 For those who prefer not to engage with every item, "bundle" options allow adopting a party's full program or positions in specific policy areas, with the ability to override individual items.
 
+Voting for individual representatives could still be possible—it just wouldn't be the central mechanism. The policy votes are the primary input; candidate votes become secondary.
+
 ### After the Election
 
-The results create specific mandates: "UBI proposal received 62% support." Elected representatives implement these mandates. Parliament's role shifts toward working out implementation details and resolving conflicts between popular but incompatible policies.
+The results create specific mandates: "UBI proposal received 62% support."
 
-A transparency dashboard tracks each mandate's implementation status—making accountability concrete rather than abstract.
+**Parliament composition** would be determined primarily by how policies performed—representatives who championed winning policies gain seats. When multiple candidates have similar policy support (common within the same party), person-votes serve as the tiebreaker to decide who actually gets elected. Policy votes remain primary; candidate votes are secondary, resolving ties rather than driving outcomes.
+
+Parliament's role shifts toward working out implementation details and resolving conflicts between popular but incompatible policies. A transparency dashboard tracks each mandate's implementation status—making accountability concrete rather than abstract.
 
 ## A Concrete Example: Universal Basic Income in Finland
 
