@@ -3,7 +3,7 @@
    viewBox="0 0 800 400"
    version="1.1"
    id="svg19"
-   sodipodi:docname="policyvote-concept-edit1.svg"
+   sodipodi:docname="policyvote-concept.svg"
    inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -18,9 +18,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.9928585"
-     inkscape:cx="320.79093"
-     inkscape:cy="97.697708"
+     inkscape:zoom="1.048984"
+     inkscape:cx="334.13284"
+     inkscape:cy="131.55587"
      inkscape:window-width="1512"
      inkscape:window-height="945"
      inkscape:window-x="0"
@@ -157,8 +157,8 @@
      rx="11.885977"
      id="rect1" />
   <text
-     x="370.79141"
-     y="34.97842"
+     x="400"
+     y="38"
      text-anchor="middle"
      class="label"
      font-size="18"
@@ -215,31 +215,31 @@
      class="label"
      id="text4">Proposals</text>
   <rect
-     x="297.58813"
+     x="285"
      y="95"
      width="150"
      height="32"
-     fill="#ffffff"
-     stroke="#999999"
+     fill="#fff"
+     stroke="#999"
      rx="4"
      id="rect5" />
   <text
-     x="372.58813"
+     x="360"
      y="116"
      text-anchor="middle"
      class="item"
      id="text5">UBI Pilot</text>
   <rect
-     x="297.58813"
+     x="285"
      y="137"
      width="150"
      height="32"
-     fill="#ffffff"
-     stroke="#999999"
+     fill="#fff"
+     stroke="#999"
      rx="4"
      id="rect6" />
   <text
-     x="372.58813"
+     x="360"
      y="158"
      text-anchor="middle"
      class="item"
@@ -381,35 +381,40 @@
   <!-- Arrows: Proposals → Mandate -->
   <path
      class="arrow"
-     d="m 447.98916,113.05141 149.18332,-0.90996"
+     d="M 435.21147,113.0369 597.138,112.14315"
      id="path18"
-     style="stroke-width:1.82273;stroke-dasharray:none" />
+     style="stroke-width:1.882;stroke-dasharray:none" />
   <path
      class="arrow"
-     d="m 106.50152,115.07724 189.97432,-0.86172"
+     d="m 106.5877,115.08683 179.98429,-0.87235"
      id="path18-3"
-     style="fill:none;stroke:#555555;stroke-width:2.00162;stroke-dasharray:none;marker-end:url(#arrowhead-2)" />
+     style="fill:none;stroke:#555555;stroke-width:1.96026;stroke-dasharray:none;marker-end:url(#arrowhead-2)" />
   <path
      class="arrow"
-     d="m 448.32943,153.84076 148.77379,-1.1138"
+     d="M 434.85639,153.82229 597.0641,152.72923"
      id="path19"
-     inkscape:transform-center-x="0.88658715"
-     inkscape:transform-center-y="47.636202" />
+     inkscape:transform-center-x="0.96664642"
+     inkscape:transform-center-y="46.748898" />
   <path
      class="arrow"
-     d="m 107.73306,153.10179 188.2516,-0.86352"
+     d="m 106.5877,115.08683 179.98429,-0.87235"
+     id="path20"
+     style="fill:none;stroke:#555555;stroke-width:1.96026;stroke-dasharray:none;marker-end:url(#arrowhead-2)" />
+  <path
+     class="arrow"
+     d="M 107.80423,153.10975 287.78852,152.2374"
      id="path20-2"
-     style="fill:none;stroke:#555555;stroke-width:1.9946;stroke-dasharray:none;marker-end:url(#arrowhead-2-0)" />
+     style="fill:none;stroke:#555555;stroke-width:1.96026;stroke-dasharray:none;marker-end:url(#arrowhead-2-0)" />
   <path
      class="arrow"
-     d="M 103.55626,144.91298 296.54433,123.85549"
+     d="m 103.63469,144.95152 183.3447,-21.99945"
      id="path20-2-0"
-     style="fill:none;stroke:#555555;stroke-width:1.99169;stroke-dasharray:none;marker-end:url(#arrowhead-2-0-3)" />
+     style="fill:none;stroke:#555555;stroke-width:1.98424;stroke-dasharray:none;marker-end:url(#arrowhead-2-0-3)" />
   <path
      class="arrow"
-     d="M 106.41708,192.48803 295.6927,161.92962"
+     d="M 106.44405,192.519 288.54836,161.90402"
      id="path20-2-0-7"
-     style="fill:none;stroke:#555555;stroke-width:2.02106;stroke-dasharray:none;marker-end:url(#arrowhead-2-0-3-3)"
-     inkscape:transform-center-x="5.0794391"
-     inkscape:transform-center-y="11.262436" />
+     style="fill:none;stroke:#555555;stroke-width:1.98424;stroke-dasharray:none;marker-end:url(#arrowhead-2-0-3-3)"
+     inkscape:transform-center-x="4.8869922"
+     inkscape:transform-center-y="11.283282" />
 </svg>
