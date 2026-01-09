@@ -144,6 +144,14 @@
          fill="#555555"
          id="polygon1-3-4" />
     </marker>
+    <!-- Person icon symbol -->
+    <symbol id="person" viewBox="0 0 30 30">
+      <!-- Head -->
+      <circle cx="15" cy="8" r="6" fill="#6699cc"/>
+      <!-- Body -->
+      <path d="M15 14 L15 22 M8 17 L22 17 M15 22 L9 28 M15 22 L21 28"
+            stroke="#6699cc" stroke-width="3" stroke-linecap="round" fill="none"/>
+    </symbol>
   </defs>
   <!-- Background -->
   <rect
@@ -180,24 +188,9 @@
      text-anchor="middle"
      class="label"
      id="text2">Voters</text>
-  <circle
-     cx="92.75576"
-     cy="112.87096"
-     r="15"
-     fill="#6699cc"
-     id="circle2" />
-  <circle
-     cx="92.75576"
-     cy="152.87096"
-     r="15"
-     fill="#6699cc"
-     id="circle3" />
-  <circle
-     cx="92.75576"
-     cy="192.87096"
-     r="15"
-     fill="#6699cc"
-     id="circle4" />
+  <use href="#person" x="77.75576" y="97.87096" width="30" height="30" id="person1"/>
+  <use href="#person" x="77.75576" y="137.87096" width="30" height="30" id="person2"/>
+  <use href="#person" x="77.75576" y="177.87096" width="30" height="30" id="person3"/>
   <!-- Proposals box -->
   <rect
      x="260"
