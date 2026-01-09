@@ -155,7 +155,7 @@ These are real challenges. They're also present in current electoral systems. Th
 PolicyVote builds on decades of democratic innovation and academic research. The pieces needed to make this work largely exist—they need integration and a shift in framing.
 
 **Academic foundations:**
-Political scientists distinguish between **programmatic**, **clientelistic**, and **charismatic** ways that parties connect to voters. PolicyVote is an institutional mechanism designed to make programmatic linkages—where parties compete on policy programs—structurally dominant. When the ballot asks about policies rather than persons, clientelistic exchange becomes difficult and charismatic appeal becomes less relevant. See the [full research background](https://github.com/antont/PolicyVote#research-background) for details on Kitschelt's framework and empirical support.
+Political scientists distinguish between **programmatic**, **clientelistic**, and **charismatic** ways that parties connect to voters. PolicyVote is an institutional mechanism designed to make programmatic linkages—where parties compete on policy programs—structurally dominant. When the ballot asks about policies rather than persons, clientelistic exchange becomes difficult and charismatic appeal becomes less relevant. See the [full research background](https://github.com/antont/PolicyVote/tree/main/01_Projects/PolicyVote#research-background) for details on Kitschelt's framework and empirical support.
 
 **Relevant precedents:**
 - **Switzerland** holds binding policy referendums roughly four times per year, demonstrating that citizens can vote directly on legislation at national scale
@@ -173,7 +173,7 @@ For detailed analysis, see the [full literature review](../Research/Literature%2
 
 This is a proposal, not a finished system. Key open questions include:
 
-1. **Interface design.** How exactly should proposals move from deliberation to ballot? What thresholds or processes prevent ballot overload while maintaining accessibility?
+1. **Simulation and interface design.** Running a real simulation—with actual policy proposals and test voters—to validate the technicalities of such voting. What does the ballot look like? How do bundling and overrides work in practice? A simulation would surface gaps in the plan that theoretical analysis misses.
 
 2. **Conflict resolution.** How should parliament handle mandates that conflict with each other or with existing law?
 
