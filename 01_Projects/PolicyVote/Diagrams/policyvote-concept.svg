@@ -261,8 +261,9 @@
      id="circle7" />
   <text
      x="300.94376"
-     y="273.95596"
+     y="268.95596"
      text-anchor="middle"
+     dominant-baseline="central"
      fill="#ffffff"
      font-size="10px"
      font-weight="bold"
@@ -275,8 +276,9 @@
      id="circle8" />
   <text
      x="370.94376"
-     y="273.95596"
+     y="268.95596"
      text-anchor="middle"
+     dominant-baseline="central"
      fill="#ffffff"
      font-size="10px"
      font-weight="bold"
@@ -289,8 +291,9 @@
      id="circle9" />
   <text
      x="440.94376"
-     y="273.95596"
+     y="268.95596"
      text-anchor="middle"
+     dominant-baseline="central"
      fill="#ffffff"
      font-size="10px"
      font-weight="bold"
