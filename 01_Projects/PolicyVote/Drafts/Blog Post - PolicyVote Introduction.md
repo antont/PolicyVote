@@ -70,35 +70,25 @@ flowchart LR
 
 ## How It Would Work
 
-PolicyVote separates the democratic process into distinct phases:
+The core change is simple: **the ballot lists policy proposals instead of (or alongside) candidates**.
 
-### Phase 1: Deliberation
+### Before the Election
 
-Before voting, policy proposals must be developed, refined, and debated. This phase uses tools designed for productive deliberation rather than divisive argument—platforms like [Pol.is](https://pol.is), which Taiwan's [vTaiwan](https://info.vtaiwan.tw/) initiative has used successfully to find consensus on contentious issues.
+Parties prepare their election programmes as they do now—developing policy positions through whatever internal processes they choose. The difference is that these policy proposals become the actual items citizens vote on, not just campaign promises attached to candidates.
 
-Key design principles from vTaiwan's experience:
-- Removing reply features reduces trolling and flame wars
-- Visualizing opinion clusters helps participants see where consensus is possible
-- Focus shifts from "winning arguments" to "attracting broad agreement"
+Parties might collaborate on shared proposals, or compete with alternative approaches to the same issue. Deliberation tools like [Pol.is](https://pol.is) could help refine proposals and find consensus, but that's optional—the core system doesn't prescribe how parties develop their programmes.
 
-Parties, citizens, and experts can participate in developing proposals. The goal is to produce concrete, actionable policy options—not vague aspirations like "improve healthcare" but specific measures like "establish universal basic income at €800/month."
+### Voting
 
-### Phase 2: Voting
+Citizens vote on specific policies. The ballot might include proposals like "Establish universal basic income at €800/month" or "Implement carbon tax at €50/tonne"—concrete, actionable measures rather than vague aspirations.
 
-Citizens vote on the refined proposals. The ballot lists specific policies; voters indicate support or opposition to each. For those who prefer not to engage with every item, "bundle" options allow adopting a party's full program or positions in specific policy areas, with the ability to override individual items.
+For those who prefer not to engage with every item, "bundle" options allow adopting a party's full program or positions in specific policy areas, with the ability to override individual items.
 
-Voting can be:
-- **Single election day** (familiar format, Phase 1 implementation)
-- **Continuous** (voters can update positions between elections as they learn more—Phase 2 implementation)
+### After the Election
 
-### Phase 3: Implementation
+The results create specific mandates: "UBI proposal received 62% support." Elected representatives implement these mandates. Parliament's role shifts toward working out implementation details and resolving conflicts between popular but incompatible policies.
 
-Elected representatives are constitutionally bound to implement the policy mandates. Parliament's role shifts from decision-making to implementation—working out details, resolving conflicts between popular but incompatible policies, and handling unforeseen situations within the mandate's boundaries.
-
-A transparency dashboard tracks:
-- Each policy mandate and its support level
-- How parliament has voted on related legislation
-- Where implementation deviates from mandate and why
+A transparency dashboard tracks each mandate's implementation status—making accountability concrete rather than abstract.
 
 ## A Concrete Example: Universal Basic Income in Finland
 

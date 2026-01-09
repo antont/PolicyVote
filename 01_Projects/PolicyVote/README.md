@@ -152,62 +152,22 @@ For detailed analysis, see the [full literature review](Research/Literature%20Re
 
 ## System Architecture
 
-PolicyVote separates two distinct functions that are often conflated in democratic systems:
+The core change is simple: **voters vote on policy proposals, not just candidates**.
 
-### 1. Deliberation Phase
+### Before the Election
 
-**Purpose**: Develop and refine policy proposals before they become voting options.
+Parties prepare their election programmes (vaaliohjelmat) as they do now—through whatever internal processes they choose. The difference is that these policy proposals become the actual items citizens vote on.
 
-**Characteristics**:
-- Advisory, exploratory
-- Consensus-finding (Pol.is-style)
-- Open to parties, citizens, experts
-- Can surface when a question is framed wrong
-- Cross-party collaboration possible
+Parties might:
+- Collaborate on shared proposals across party lines
+- Compete with alternative approaches to the same issue
+- Use deliberation tools like Pol.is to refine proposals (optional)
 
-**Activities**:
-- Parties develop their election programs (vaaliohjelmat)
-- Citizens contribute ideas and feedback
-- Experts provide technical input
-- Conflicts and trade-offs are explored
-- Proposals are refined for clarity and actionability
+The system doesn't prescribe how parties develop their programmes—only that the output is concrete, votable policy proposals.
 
-**Tools**: Platforms like Pol.is that enable productive discussion without flame wars (no reply button, opinion clustering, consensus visualization).
+### The Voting Mechanism
 
-### 2. Voting Phase
-
-**Purpose**: Create binding mandates from refined policy options.
-
-**Characteristics**:
-- Binding, decisive
-- Creates constitutional mandate
-- Representatives accountable to results
-- Clear yes/no/preference expression
-
-**This is the PolicyVote mechanism** described in detail below.
-
-### 3. Interface: Deliberation → Voting
-
-Policy proposals need a clear pathway from exploratory deliberation to binding vote. This interface determines which proposals become voting options.
-
-**Possible mechanisms**:
-
-| Mechanism | Description | Pros | Cons |
-|-----------|-------------|------|------|
-| **Party gatekeeping** | Parties decide which proposals from deliberation enter their programs | Maintains party coherence | Parties can ignore popular ideas |
-| **Threshold qualification** | Proposals reaching consensus threshold in deliberation automatically qualify for ballot | Direct citizen pathway | Could flood ballot with proposals |
-| **Hybrid** | Parties curate + citizen-initiated proposals with signature threshold | Balance of structure and openness | More complex |
-
-**Interface requirements**:
-- Traceability: voters can see where a proposal came from and how it was refined
-- Quality control: proposals must be concrete, actionable, legally feasible
-- Conflict pre-check: proposals flagged if they contradict existing law or other proposals
-
-> **Open question:** What threshold or process should determine when a deliberated proposal becomes a voting option? How to balance accessibility with preventing ballot overload?
-
-## Voting Mechanism
-
-### Basic vote model
+**Basic vote model:**
 Each voter can simply support a proposal or not. Binary choice per policy.
 
 > **Open question:** Evaluate alternative models later: ranked preferences, vote point budgets, approval voting with weights.
