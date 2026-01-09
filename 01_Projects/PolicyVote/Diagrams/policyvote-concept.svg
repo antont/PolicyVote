@@ -222,6 +222,9 @@
      text-anchor="middle"
      class="item"
      id="text5">UBI Pilot</text>
+  <!-- Party indicators for UBI: A (blue) + B (green) -->
+  <circle cx="432" cy="102" r="5" fill="#3366cc" stroke="#fff" stroke-width="1"/>
+  <circle cx="443" cy="102" r="5" fill="#33aa55" stroke="#fff" stroke-width="1"/>
   <rect
      x="297.58813"
      y="137"
@@ -237,6 +240,9 @@
      text-anchor="middle"
      class="item"
      id="text6">Carbon Tax</text>
+  <!-- Party indicators for Carbon Tax: B (green) + C (orange) -->
+  <circle cx="432" cy="144" r="5" fill="#33aa55" stroke="#fff" stroke-width="1"/>
+  <circle cx="443" cy="144" r="5" fill="#cc6633" stroke="#fff" stroke-width="1"/>
   <!-- Parties box -->
   <rect
      x="260"
