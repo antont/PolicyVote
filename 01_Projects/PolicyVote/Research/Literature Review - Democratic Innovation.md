@@ -413,7 +413,110 @@ Each assessed on: Freedom, Equality, Control
 
 ---
 
-## 6. Relevance to PolicyVote
+## 6. Academic Foundations for Policy-Centered Elections
+
+### The Politician-Citizen Perception Gap
+
+A landmark 2024 study by Lucas, Sheffer, Loewen, Walgrave et al. in the *American Political Science Review* provides striking empirical evidence for PolicyVote's core diagnosis.
+
+**Key Findings (Lucas et al. 2024):**
+- **73% of politicians** hold "democratic realist" views—believing voters are leader-focused, short-term oriented, single-issue, and NOT policy-oriented
+- **Only ~35% of citizens** are democratic realists; another **~35% are "democratic optimists"** who see voters as policy-oriented, fair, prospective, and multi-issue
+- Politicians are significantly MORE likely than citizens to believe voters are:
+  - Leader-focused rather than ideas/policy-focused
+  - Egocentric rather than sociotropic
+  - Short-term oriented rather than long-term
+  - Unfair in blaming politicians for things outside their control
+
+**Self-Fulfilling Prophecy:**
+The paper notes: *"politicians who believe that voters are oriented to identity-based appeals rather than policy-based appeals are likely to spend more time communicating with constituents about relevant in-groups and out-groups than about policy, heightening the salience of group identities."*
+
+This creates a cycle: politicians assume voters don't care about policy → campaigns become personality-focused → voters respond to what's offered → politicians feel validated. **PolicyVote aims to structurally break this cycle** by making policy the explicit object of electoral choice.
+
+**Cross-National Consistency:**
+The politician-citizen gap is remarkably consistent across all 11 countries studied (Australia, Belgium, Canada, Czechia, Denmark, Germany, Israel, Netherlands, Portugal, Sweden, Switzerland)—suggesting this is a structural feature of representative democracy, not a cultural anomaly.
+
+> **Citation:** Lucas, J., Sheffer, L., Loewen, P.J., et al. (2024). Politicians' Theories of Voting Behavior. *American Political Science Review*, 119(3), 1304-1321. https://doi.org/10.1017/S0003055424001060
+
+### Programmatic vs Personalistic Representation
+
+Herbert Kitschelt's influential work distinguishes between different types of party-voter linkages:
+
+1. **Programmatic linkages** — parties compete on policy programs; voters choose based on policy proximity
+2. **Clientelistic linkages** — parties exchange material benefits for votes
+3. **Charismatic-personalistic linkages** — voters choose based on leader personality and identity
+
+Kitschelt argues that **programmatic representation** (competition over policy programs) contrasts with candidate-centered, personalistic politics and is normatively superior for accountability.
+
+PolicyVote is essentially a mechanism designed to force elections toward programmatic linkages by making policies the explicit ballot items.
+
+> **Key works:**
+> - Kitschelt, H. (2000). "Linkages between Citizens and Politicians in Democratic Polities." *Comparative Political Studies* 33(6–7): 845–879.
+> - Kitschelt, H. & Wilkinson, S.I., eds. (2007). *Patrons, Clients and Policies: Patterns of Democratic Accountability and Political Competition*. Cambridge University Press.
+
+### Direct Democracy and Policy Outcomes
+
+Leemann and Wasserfallen (2016) provide evidence that direct democratic institutions produce policy outcomes closer to citizen preferences:
+
+> *"More frequent initiatives and referendums bring policies closer to median voter preferences."*
+
+This empirically validates the intuition that when citizens vote directly on policy, policy outcomes better reflect citizen preferences—even in existing systems where direct democracy supplements rather than replaces representative institutions.
+
+> **Citation:** Leemann, L. & Wasserfallen, F. (2016). "The Democratic Effect of Direct Democracy." *American Political Science Review* 110(4): 750–762.
+
+### Can Citizens Vote Consistently on Policies?
+
+Barbieri (2024) directly studies what PolicyVote proposes—citizens voting on specific policies rather than candidates. Using original survey data from California and Swiss referendums, she asks: do citizens vote consistently with their own policy preferences?
+
+**Key Findings:**
+- **Citizens CAN vote consistently** — policy positions are strong predictors of referendum choices, contrary to democratic realist skepticism
+- **Knowledge improves consistency** — higher issue-specific knowledge (understanding what a proposal does and its consequences) increases the probability of voting in line with one's own preferences
+- **Elite cues are double-edged** — party/government recommendations *increase* consistent voting when they confirm a voter's position, but *decrease* it when they conflict, leading some voters away from their own policy preferences
+
+**Implications for PolicyVote:**
+The finding that cues can both help and hurt suggests PolicyVote's structure could be optimal: voters get the information benefits of party positions (parties propose policies with explanations) without being forced to adopt a complete bundle. Cross-party voting allows citizens to follow cues that confirm their preferences while ignoring those that conflict.
+
+Barbieri explicitly notes that in referendums "citizens vote on **specific policies and not for candidates or parties**"—and finds this can produce representative outcomes when information quality is high. This directly supports PolicyVote's feasibility.
+
+> **Citation:** Barbieri, G. (2024). "Informed or Influenced? Voting Consistently in Direct Democratic Votes." Paper presented at Western Political Science Association Annual Meeting 2024.
+
+### Foundational Theoretical Debates
+
+PolicyVote engages with a central tension in democratic theory:
+
+**Spatial/Issue Voting (Downs 1957)**
+Anthony Downs formalized the idea that voters choose parties/candidates based on **policy proximity** in a multidimensional space. This is the canonical policy-voting model and provides theoretical foundation for PolicyVote's assumption that voters can and do evaluate policies.
+
+**Democratic Realism (Achen & Bartels 2016)**
+Christopher Achen and Larry Bartels challenge issue-voting models, arguing that group identities and retrospective performance evaluations dominate voter behavior. Their critique suggests policy-centered voting may be unrealistic.
+
+**PolicyVote's Response:**
+The Lucas et al. (2024) findings suggest the picture is more complex:
+1. Citizens are more policy-oriented than democratic realists assume
+2. Politicians may be *creating* identity-focused politics through their campaigning choices
+3. The structure of elections (voting for persons vs policies) may itself shape voter behavior
+
+PolicyVote hypothesizes that **changing what elections ask** (policies vs persons) could shift the equilibrium toward more policy-oriented politics—breaking the self-fulfilling prophecy that currently reinforces personalistic politics.
+
+### Additional Academic Literature
+
+**On Direct Democracy and Issue Voting:**
+- Barber, B. (1984). *Strong Democracy: Participatory Politics for a New Age*. University of California Press.
+- Gerber, E.R. (1999). *The Populist Paradox: Interest Group Influence and the Promise of Direct Legislation*. Princeton University Press.
+- Stadelmann-Steffen, I. (2011). "Citizens as Voters and Decision-Makers in Direct Democracy." *Acta Politica* 46(3): 239–267.
+
+**On Programmatic Representation:**
+- Powell, G.B. Jr. (2000). *Elections as Instruments of Democracy: Majoritarian and Proportional Visions*. Yale University Press.
+- Thomassen, J. & Schmitt, H. (1997). "Policy Representation." *European Journal of Political Research* 32(2): 165–184.
+- Mansbridge, J. (2003). "Rethinking Representation." *American Political Science Review* 97(4): 515–528.
+
+**On Mandate Theory:**
+- Pitkin, H. (1967). *The Concept of Representation*. University of California Press.
+- Manin, B., Przeworski, A., & Stokes, S.C. (1999). "Elections and Representation." In *Democracy, Accountability, and Representation*. Cambridge University Press.
+
+---
+
+## 7. Relevance to PolicyVote
 
 ### Concepts to Incorporate
 
@@ -443,6 +546,28 @@ Each assessed on: Freedom, Equality, Control
 
 ## Sources
 
+### Academic Publications
+
+**Core Papers:**
+- Lucas, J., Sheffer, L., Loewen, P.J., et al. (2024). "Politicians' Theories of Voting Behavior." *American Political Science Review* 119(3): 1304-1321. https://doi.org/10.1017/S0003055424001060
+- Barbieri, G. (2024). "Informed or Influenced? Voting Consistently in Direct Democratic Votes." Paper presented at WPSA 2024. https://www.wpsanet.org/papers/docs/WPSA%202024%20Barbieri.pdf
+- Leemann, L. & Wasserfallen, F. (2016). "The Democratic Effect of Direct Democracy." *American Political Science Review* 110(4): 750–762.
+- Kitschelt, H. (2000). "Linkages between Citizens and Politicians in Democratic Polities." *Comparative Political Studies* 33(6–7): 845–879.
+
+**Books:**
+- Achen, C.H. & Bartels, L.M. (2016). *Democracy for Realists: Why Elections Do Not Produce Responsive Government*. Princeton University Press.
+- Barber, B. (1984). *Strong Democracy: Participatory Politics for a New Age*. University of California Press.
+- Downs, A. (1957). *An Economic Theory of Democracy*. Harper.
+- Gerber, E.R. (1999). *The Populist Paradox: Interest Group Influence and the Promise of Direct Legislation*. Princeton University Press.
+- Kitschelt, H. & Wilkinson, S.I., eds. (2007). *Patrons, Clients and Policies*. Cambridge University Press.
+- Pitkin, H. (1967). *The Concept of Representation*. University of California Press.
+- Powell, G.B. Jr. (2000). *Elections as Instruments of Democracy*. Yale University Press.
+
+**Additional Articles:**
+- Mansbridge, J. (2003). "Rethinking Representation." *American Political Science Review* 97(4): 515–528.
+- Stadelmann-Steffen, I. (2011). "Citizens as Voters and Decision-Makers in Direct Democracy." *Acta Politica* 46(3): 239–267.
+- Thomassen, J. & Schmitt, H. (1997). "Policy Representation." *European Journal of Political Research* 32(2): 165–184.
+
 ### Primary Sources (scraped and archived)
 - **LiquidFeedback**: liquidfeedback.com - Platform documentation and principles
 - **RadicalxChange QV**: radicalxchange.org/wiki/quadratic-voting/ - Comprehensive QV guide with tools
@@ -462,7 +587,7 @@ Each assessed on: Freedom, Equality, Control
 - arXiv paper 1911.08774 - Blockchain liquid democracy implementation
 
 ### Archived Scrapes
-All key sources have been scraped and stored in `/Research/scrape-*.md` files for offline reference and citation accuracy.
+All key sources have been scraped and stored in `/Research/Sources/` files for offline reference and citation accuracy.
 
 ---
 

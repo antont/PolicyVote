@@ -54,6 +54,10 @@ The primary goal of PolicyVote is not just a different voting mechanism - it's a
 
 Current electoral systems are extremely focused on individuals - candidates and representatives. This creates dysfunction:
 
+> **Research findings**:
+> - A 2024 study in the *American Political Science Review* found that 73% of politicians believe voters are NOT policy-oriented—yet citizens themselves are far more evenly split. Politicians may be creating personality-focused politics through a self-fulfilling prophecy. ([Lucas et al. 2024](Research/Literature%20Review%20-%20Democratic%20Innovation.md#the-politician-citizen-perception-gap))
+> - Research on California and Swiss referendums shows that **citizens CAN vote consistently with their policy preferences** when voting directly on issues. Higher issue knowledge improves this consistency. ([Barbieri 2024](Research/Literature%20Review%20-%20Democratic%20Innovation.md#can-citizens-vote-consistently-on-policies))
+
 **Campaigns become self-promotion**
 - Candidates compete for visibility and "good vibes"
 - Substance takes a back seat to personal branding
@@ -106,6 +110,45 @@ When voting is explicitly about issues rather than people:
 ### This Is the Core Innovation
 
 The voting mechanism matters, but **the framing shift is the real intervention**. PolicyVote is designed to make it natural - even unavoidable - for political discourse to center on policies rather than personalities.
+
+## Research Background
+
+PolicyVote builds on established political science research about how voters and politicians connect.
+
+### Kitschelt's Three Linkage Types
+
+Political scientist Herbert Kitschelt identified three ways parties can link to voters:
+
+| Linkage Type | How It Works | Example |
+|--------------|--------------|---------|
+| **Programmatic** | Parties compete on policy programs; voters choose based on policy positions | "Vote for us, we'll implement universal healthcare" |
+| **Clientelistic** | Parties exchange targeted benefits for votes | "Vote for us, we'll give you a government job" |
+| **Charismatic** | Voters choose based on leader personality and emotional appeal | "Vote for us because our leader is strong" |
+
+Kitschelt argues that **programmatic representation** is normatively superior for democratic accountability—but which type dominates depends on economic development, party organization, and institutional context. Parties *choose* their strategy based on what works.
+
+### PolicyVote as Institutional Mechanism
+
+PolicyVote is not just describing what representation *should* look like—it's an **institutional design to make programmatic linkages structurally dominant**.
+
+When the ballot asks about *policies* rather than *persons*:
+- **Clientelistic exchange becomes difficult** — you can't trade a policy vote for a job
+- **Charismatic appeal becomes less relevant** — the ballot asks about UBI, not about the leader's personality
+- **Programmatic competition becomes the only viable strategy** — because that's literally what's being voted on
+
+In Kitschelt's framework, parties choose linkage strategies based on incentives. PolicyVote changes the incentive structure itself.
+
+### Empirical Support
+
+Recent research supports the feasibility of policy-centered voting:
+
+- **Lucas et al. (2024)**: Politicians systematically underestimate citizens' policy-orientation. 73% of politicians believe voters don't care about policy—but citizens are far more evenly split. This suggests person-centered politics may be a self-fulfilling prophecy.
+
+- **Barbieri (2024)**: Citizens in California and Swiss referendums *can* vote consistently with their policy preferences. Higher issue knowledge improves this consistency. Direct policy voting works.
+
+- **Leemann & Wasserfallen (2016)**: Direct democratic institutions bring policy outcomes closer to median voter preferences.
+
+For detailed analysis, see the [full literature review](Research/Literature%20Review%20-%20Democratic%20Innovation.md).
 
 ## System Architecture
 

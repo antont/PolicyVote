@@ -24,6 +24,8 @@ The results are predictable:
 
 These aren't failures of individual politicians or voters. They're structural outcomes of person-centered elections.
 
+Recent research supports this diagnosis. A 2024 study in the *American Political Science Review* surveyed nearly a thousand politicians across 11 countries and found that **73% hold "democratic realist" views**—believing voters are leader-focused, short-term oriented, and NOT policy-driven. Yet when citizens were surveyed, they were far more evenly split. The researchers note that politicians who believe voters don't care about policy "are likely to spend more time communicating with constituents about relevant in-groups and out-groups than about policy." A self-fulfilling prophecy.
+
 ## A Different Question
 
 What if elections asked a different question?
@@ -160,7 +162,10 @@ These are real challenges. They're also present in current electoral systems. Th
 
 ## Context and Existing Work
 
-PolicyVote builds on decades of democratic innovation. The pieces needed to make this work largely exist—they need integration and a shift in framing.
+PolicyVote builds on decades of democratic innovation and academic research. The pieces needed to make this work largely exist—they need integration and a shift in framing.
+
+**Academic foundations:**
+Political scientists distinguish between **programmatic**, **clientelistic**, and **charismatic** ways that parties connect to voters. PolicyVote is an institutional mechanism designed to make programmatic linkages—where parties compete on policy programs—structurally dominant. When the ballot asks about policies rather than persons, clientelistic exchange becomes difficult and charismatic appeal becomes less relevant. See the [full research background](https://github.com/antont/PolicyVote#research-background) for details on Kitschelt's framework and empirical support.
 
 **Relevant precedents:**
 - **Switzerland** holds binding policy referendums roughly four times per year, demonstrating that citizens can vote directly on legislation at national scale
@@ -168,7 +173,7 @@ PolicyVote builds on decades of democratic innovation. The pieces needed to make
 - **Liquid Democracy** (tested by Germany's Pirate Party and others) experimented with flexible vote delegation, but encountered problems: votes concentrated in "super-delegates" and the system remained person-centered
 - **Quadratic Voting** addresses preference intensity but doesn't change what elections are fundamentally about
 
-The core insight from reviewing this landscape: most democratic innovations optimize voting *mechanics* while leaving elections person-centered. PolicyVote attempts something different—shifting what elections are fundamentally *about*. Whether this framing change would actually reshape political culture is the key empirical question.
+The core insight from reviewing this landscape: most democratic innovations optimize voting *mechanics* while leaving elections person-centered. PolicyVote attempts something different—shifting what elections are fundamentally *about*. The research on politician-citizen perception gaps suggests the current equilibrium may be unstable—a structural intervention could break the self-fulfilling prophecy.
 
 **Why consider this now?** Trust in representative democracy is declining across Western democracies. Citizens report that elections don't translate into policy outcomes they want—perhaps because elections aren't actually asking about policy outcomes. Meanwhile, the technical barriers have largely fallen: Estonia's digital governance, Finland's vaalikone (candidate matching tools), and Taiwan's civic tech all demonstrate relevant capabilities.
 
