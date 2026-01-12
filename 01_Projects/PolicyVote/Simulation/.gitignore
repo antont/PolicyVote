@@ -1,0 +1,17 @@
+# Virtual environment
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Outputs
+outputs/
+*.log
+
+# Jupyter
+.ipynb_checkpoints/

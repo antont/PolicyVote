@@ -1,0 +1,27 @@
+# PolicyVote Simulation Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core Concordia (install from local clone)
+# pip install -e ~/src/concordia
+
+# Concordia dependencies
+numpy>=1.26
+pandas
+sentence-transformers
+termcolor
+reactivex
+tenacity
+
+# LLM providers
+anthropic  # Claude API
+openai     # For OpenAI API / Together AI
+
+# Examples extras
+docstring-parser
+immutabledict
+ml_collections
+matplotlib
+
+# Notebook support
+jupyter
+ipython
