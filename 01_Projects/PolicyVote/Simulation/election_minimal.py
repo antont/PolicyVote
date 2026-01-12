@@ -302,7 +302,7 @@ def configure_scenes() -> Sequence[scene_lib.SceneSpec]:
         scene_lib.SceneSpec(
             scene_type=results,
             participants=[VIHREAT],  # Just one participant for final announcement
-            num_rounds=6,  # Extra buffer for termination checks
+            num_rounds=4,  # +2 for termination overhead
             premise={
                 VIHREAT: ['The election official will now announce the results.'],
             },
@@ -820,10 +820,46 @@ def main():
         results_html = sim.play(max_steps=50, raw_log=raw_log)
     except RuntimeError as e:
         if "Counter state" in str(e) and "max number of rounds" in str(e):
-            # Concordia scene_tracker edge case - simulation completed, just cleanup issue
-            print(f"\n[Note: Concordia scene tracker edge case: {e}]")
-            print("[Simulation completed successfully before this error]")
-            results_html = "<html><body><p>Simulation completed (see raw log for details)</p></body></html>"
+            # Concordia scene_tracker bug - simulation completed, just termination issue
+            print(f"\n[Note: Concordia scene tracker issue: {e}]")
+            print("[Generating report from collected data...]")
+
+            # Generate HTML report manually from raw_log (same as Concordia does)
+            import copy
+            from concordia.utils import html as html_lib
+            from concordia.utils import helper_functions as helper_functions_lib
+
+            player_logs = []
+            player_log_names = []
+
+            # Get entity memories
+            for player in sim.entities:
+                entity_memory_component = player.get_component("__memory__")
+                if entity_memory_component:
+                    entity_memories = entity_memory_component.get_all_memories_as_text()
+                    player_html = html_lib.PythonObjectToHTMLConverter(entity_memories).convert()
+                    player_logs.append(player_html)
+                    player_log_names.append(f"{player.name}")
+
+            # Get game master memories
+            game_master_memories = sim.game_master_memory_bank.get_all_memories_as_text()
+            game_master_html = html_lib.PythonObjectToHTMLConverter(game_master_memories).convert()
+            player_logs.append(game_master_html)
+            player_log_names.append("Game Master Memories")
+
+            # Get scores
+            scores = helper_functions_lib.find_data_in_nested_structure(raw_log, "Player Scores")
+            summary = f"Player Scores: {scores[-1]}" if scores else ""
+
+            # Build HTML
+            results_log = html_lib.PythonObjectToHTMLConverter(copy.deepcopy(raw_log)).convert()
+            tabbed_html = html_lib.combine_html_pages(
+                [results_log, *player_logs],
+                ["Game Master log", *player_log_names],
+                summary=summary,
+                title="Simulation Log",
+            )
+            results_html = html_lib.finalise_html(tabbed_html)
         else:
             raise
 
