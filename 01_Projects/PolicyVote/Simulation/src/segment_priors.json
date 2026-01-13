@@ -1,0 +1,98 @@
+{
+  "Young Urban Progressives": {
+    "ubi_pilot": {
+      "support": 61,
+      "oppose": 24,
+      "abstain": 15
+    },
+    "automation_tax": {
+      "support": 70,
+      "oppose": 15,
+      "abstain": 15
+    }
+  },
+  "Young Working Class": {
+    "ubi_pilot": {
+      "support": 45,
+      "oppose": 40,
+      "abstain": 15
+    },
+    "automation_tax": {
+      "support": 70,
+      "oppose": 15,
+      "abstain": 15
+    }
+  },
+  "Urban Professionals": {
+    "ubi_pilot": {
+      "support": 20,
+      "oppose": 65,
+      "abstain": 15
+    },
+    "automation_tax": {
+      "support": 31,
+      "oppose": 54,
+      "abstain": 15
+    }
+  },
+  "Rural/Agricultural": {
+    "ubi_pilot": {
+      "support": 66,
+      "oppose": 19,
+      "abstain": 15
+    },
+    "automation_tax": {
+      "support": 70,
+      "oppose": 15,
+      "abstain": 15
+    }
+  },
+  "Older Middle Class": {
+    "ubi_pilot": {
+      "support": 29,
+      "oppose": 56,
+      "abstain": 15
+    },
+    "automation_tax": {
+      "support": 50,
+      "oppose": 35,
+      "abstain": 15
+    }
+  },
+  "Public Sector": {
+    "ubi_pilot": {
+      "support": 70,
+      "oppose": 15,
+      "abstain": 15
+    },
+    "automation_tax": {
+      "support": 70,
+      "oppose": 15,
+      "abstain": 15
+    }
+  },
+  "Business/Entrepreneurs": {
+    "ubi_pilot": {
+      "support": 20,
+      "oppose": 65,
+      "abstain": 15
+    },
+    "automation_tax": {
+      "support": 20,
+      "oppose": 65,
+      "abstain": 15
+    }
+  },
+  "Tech Workers": {
+    "ubi_pilot": {
+      "support": 20,
+      "oppose": 65,
+      "abstain": 15
+    },
+    "automation_tax": {
+      "support": 25,
+      "oppose": 60,
+      "abstain": 15
+    }
+  }
+}
