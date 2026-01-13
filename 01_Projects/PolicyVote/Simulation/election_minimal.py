@@ -14,10 +14,20 @@ Research basis: Finnish National Election Study (FNES), political science litera
 
 from collections.abc import Mapping, Sequence
 import dataclasses
+import json
 import sys
+from pathlib import Path
 
 # Add concordia to path if needed
 sys.path.insert(0, '/Users/tonialatalo/src/concordia')
+
+# Load data-driven segment priors from FSD analysis
+SEGMENT_PRIORS_PATH = Path(__file__).parent / 'src' / 'segment_priors.json'
+SEGMENT_PRIORS = {}
+if SEGMENT_PRIORS_PATH.exists():
+    with open(SEGMENT_PRIORS_PATH) as f:
+        SEGMENT_PRIORS = json.load(f)
+    print(f"Loaded segment priors from {SEGMENT_PRIORS_PATH}")
 
 from concordia.agents import entity_agent_with_logging
 from concordia.associative_memory import basic_associative_memory
@@ -141,6 +151,7 @@ class VoterSegmentAgent(prefab_lib.Prefab):
     """A voter segment that decides on policies based on interests.
 
     Uses Bedrock tool use for structured voting output (no text parsing needed).
+    Incorporates data-driven priors from FSD survey analysis.
     """
 
     description: str = 'A voter segment representing a demographic group.'
@@ -180,14 +191,40 @@ class VoterSegmentAgent(prefab_lib.Prefab):
             pre_act_label='What matters to us',
         )
 
+        # Data-driven priors from Finnish survey data (FSD Kansalaispulssi)
+        priors = SEGMENT_PRIORS.get(agent_name, {})
+        if priors:
+            ubi_priors = priors.get('ubi_pilot', {})
+            auto_priors = priors.get('automation_tax', {})
+            priors_text = (
+                f'Based on analysis of Finnish survey data (n=1692 respondents), '
+                f'this demographic segment shows the following baseline tendencies:\n'
+                f'- UBI Pilot: {ubi_priors.get("support", "?")}% support, '
+                f'{ubi_priors.get("oppose", "?")}% oppose, '
+                f'{ubi_priors.get("abstain", "?")}% abstain\n'
+                f'- Automation Tax: {auto_priors.get("support", "?")}% support, '
+                f'{auto_priors.get("oppose", "?")}% oppose, '
+                f'{auto_priors.get("abstain", "?")}% abstain\n'
+                f'These are derived from issue priority analysis. Actual votes may vary '
+                f'based on the specific proposals and debate arguments.'
+            )
+        else:
+            priors_text = 'No survey data available for this segment.'
+
+        data_priors = agent_components.constant.Constant(
+            state=priors_text,
+            pre_act_label='Survey data baseline',
+        )
+
         # Deliberative component: how should this demographic vote?
         voting_consideration = agent_components.question_of_recent_memories.QuestionOfRecentMemories(
             model=model,
             pre_act_label=f'Voting consideration',
             question=(
                 f'{agent_name} is a diverse demographic group, not a single person. '
-                f'Given what they have heard about the proposals, and considering '
-                f'the range of views within this demographic, how divided would they be? '
+                f'Given what they have heard about the proposals, the survey data baseline, '
+                f'and considering the range of views within this demographic, '
+                f'how divided would they be? '
                 f'What percentage would support, oppose, or abstain on each proposal?'
             ),
             answer_prefix=f'{agent_name} are considering: ',
@@ -198,6 +235,7 @@ class VoterSegmentAgent(prefab_lib.Prefab):
             'Instructions': instructions,
             'demographics': demographics,
             'priorities': priorities,
+            'data_priors': data_priors,
             agent_components.observation.DEFAULT_OBSERVATION_COMPONENT_KEY: observation,
             agent_components.memory.DEFAULT_MEMORY_COMPONENT_KEY: (
                 agent_components.memory.AssociativeMemory(memory_bank=memory_bank)
