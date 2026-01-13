@@ -252,7 +252,7 @@ class VoterSegmentAgent(prefab_lib.Prefab):
         # Wrap with structured voting (uses Bedrock tool use for vote output)
         act_component = StructuredVotingActComponent(
             wrapped_act_component=base_act_component,
-            model_id='anthropic.claude-3-haiku-20240307-v1:0',
+            model_id='us.anthropic.claude-haiku-4-5-20251001-v1:0',
         )
 
         return entity_agent_with_logging.EntityAgentWithLogging(
@@ -1032,10 +1032,10 @@ def main():
     if aws_access_key:
         print("Using AWS Bedrock with IAM credentials...")
         # Use Concordia's built-in Bedrock support (requires boto3 + IAM credentials)
-        # Note: Only Claude 3 Haiku supports on-demand; newer models need inference profiles
+        # Note: Uses Haiku 4.5 via cross-region inference profile
         model = language_model_utils.language_model_setup(
             api_type='amazon_bedrock',
-            model_name='anthropic.claude-3-haiku-20240307-v1:0',
+            model_name='us.anthropic.claude-haiku-4-5-20251001-v1:0',
         )
         # Use real embedder
         import sentence_transformers

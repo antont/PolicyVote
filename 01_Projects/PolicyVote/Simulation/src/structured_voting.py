@@ -4,6 +4,7 @@ Uses Bedrock's converse API with tool configuration to get structured JSON outpu
 instead of parsing text like "Support: 45%, Oppose: 40%, Abstain: 15%".
 """
 
+import os
 import boto3
 from concordia.typing import entity as entity_lib
 from concordia.typing import entity_component
@@ -145,7 +146,7 @@ class StructuredVotingActComponent(entity_component.ActingComponent):
     def __init__(
         self,
         wrapped_act_component: entity_component.ActingComponent,
-        model_id: str = 'anthropic.claude-3-haiku-20240307-v1:0',
+        model_id: str = 'us.anthropic.claude-haiku-4-5-20251001-v1:0',
     ):
         """Initialize the structured voting component.
 
@@ -157,7 +158,10 @@ class StructuredVotingActComponent(entity_component.ActingComponent):
         self._wrapped = wrapped_act_component
         self._model_id = model_id
         # AWS credentials come from environment (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY)
-        self._client = boto3.client('bedrock-runtime')
+        self._client = boto3.client(
+            'bedrock-runtime',
+            region_name=os.environ.get('AWS_DEFAULT_REGION', 'us-east-1'),
+        )
 
     def set_entity(self, entity) -> None:
         """Set entity for both this component and wrapped component."""
