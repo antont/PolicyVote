@@ -72,11 +72,23 @@ The paper identifies three user motivations for multi-actor generative AI:
 
 ### Entities
 
-| Agent Type | Description |
-|------------|-------------|
-| **Party agents** | Represent political parties (Vihreät, Kokoomus, Vasemmisto, SDP) with policy positions |
-| **Voter segment agents** | Represent demographic groups with priorities and concerns |
-| **Game Master** | Orchestrates deliberation and voting phases |
+| Agent Type | Count | Description |
+|------------|-------|-------------|
+| **Party agents** | 8 | All major Finnish parties: Vihreät, Kokoomus, Vasemmisto, SDP, Keskusta, Perussuomalaiset, RKP, KD |
+| **Voter segment agents** | 8 | Demographic groups based on FNES research (see below) |
+| **Game Master** | 1 | Orchestrates deliberation and voting phases |
+
+**Voter Segments** (with population weights):
+| Segment | Weight | Demographics |
+|---------|--------|--------------|
+| Young Urban Progressives | 15% | 18-35, cities, university-educated |
+| Young Working Class | 10% | 18-35, vocational/no degree, precarious work |
+| Urban Professionals | 15% | 35-55, cities, higher education |
+| Rural/Agricultural | 10% | Countryside, farmers, regional identity |
+| Older Middle Class | 18% | 55+, homeowners, stable careers/retired |
+| Public Sector Workers | 12% | Government/municipal employees |
+| Business/Entrepreneurs | 8% | SME owners, self-employed |
+| Tech Workers | 7% | Software, AI, IT professionals |
 
 ### Components
 
@@ -125,10 +137,11 @@ This allows rapid iteration on election scenarios by mixing and matching compone
 
 ## Files
 
-- `election_minimal.py` - Main simulation (4 parties, 3 voter segments, 2 proposals)
+- `election_minimal.py` - Main simulation (8 parties, 8 voter segments, 2 proposals)
 - `src/anthropic_model.py` - Claude language model wrapper for Concordia
 - `src/election_initializer.py` - Custom initializer using real facts
 - `src/structured_voting.py` - Bedrock tool use for structured vote output
+- `scripts/fnes_analysis.py` - Placeholder for Finnish National Election Study analysis
 - `requirements.txt` - Python dependencies
 - `outputs/` - Generated HTML reports and JSON logs
 
@@ -136,4 +149,5 @@ This allows rapid iteration on election scenarios by mixing and matching compone
 
 - [Concordia GitHub](https://github.com/google-deepmind/concordia)
 - [Vezhnevets et al. 2025 - Multi-Actor Generative AI as a Game Engine](https://arxiv.org/abs/2507.08892)
+- [Finnish National Election Study (FNES)](https://services.fsd.tuni.fi/catalogue/series/39) - Data source for segment definitions
 - [PolicyVote Project](../README.md)

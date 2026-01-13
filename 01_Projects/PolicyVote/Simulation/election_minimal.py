@@ -1,14 +1,15 @@
 """
-PolicyVote Election Simulation - Minimal Prototype
+PolicyVote Election Simulation
 Uses Concordia to simulate policy-based voting.
 
-This minimal example demonstrates:
-- 2 party agents (Vihreät, Kokoomus)
-- 2 voter segment agents (young progressives, older conservatives)
-- 1 proposal: UBI Pilot (800€/month)
+This simulation demonstrates:
+- 8 party agents (all major Finnish parties)
+- 8 voter segment agents (demographic groups)
+- 2 proposals: UBI Pilot (800€/month), Automation Tax
 - Deliberation + Voting phases
 
 Based on Concordia's game_theoretic_and_dramaturgic pattern.
+Research basis: Finnish National Election Study (FNES), political science literature.
 """
 
 from collections.abc import Mapping, Sequence
@@ -32,19 +33,37 @@ from concordia.utils import helper_functions
 
 # === CONFIGURATION ===
 
-# Parties
+# Parties (8 major Finnish parties)
 VIHREAT = 'Vihreät Representative'
 KOKOOMUS = 'Kokoomus Representative'
 VASEMMISTO = 'Vasemmistoliitto Representative'
 SDP = 'SDP Representative'
+KESKUSTA = 'Keskusta Representative'
+PERUSSUOMALAISET = 'Perussuomalaiset Representative'
+RKP = 'RKP Representative'
+KD = 'KD Representative'
 
-# Voter segments
-YOUNG_PROGRESSIVES = 'Young Progressive Voters'
-OLDER_CONSERVATIVES = 'Older Conservative Voters'
+# Voter segments (8 demographic groups based on FNES research)
+YOUNG_URBAN_PROGRESSIVES = 'Young Urban Progressives'
+YOUNG_WORKING_CLASS = 'Young Working Class'
+URBAN_PROFESSIONALS = 'Urban Professionals'
+RURAL_AGRICULTURAL = 'Rural and Agricultural Voters'
+OLDER_MIDDLE_CLASS = 'Older Middle Class'
+PUBLIC_SECTOR = 'Public Sector Workers'
+BUSINESS_ENTREPRENEURS = 'Business and Entrepreneurs'
 TECH_WORKERS = 'Tech Industry Workers'
 
-ALL_VOTERS = [YOUNG_PROGRESSIVES, OLDER_CONSERVATIVES, TECH_WORKERS]
-ALL_PARTIES = [VIHREAT, KOKOOMUS, VASEMMISTO, SDP]
+ALL_VOTERS = [
+    YOUNG_URBAN_PROGRESSIVES,
+    YOUNG_WORKING_CLASS,
+    URBAN_PROFESSIONALS,
+    RURAL_AGRICULTURAL,
+    OLDER_MIDDLE_CLASS,
+    PUBLIC_SECTOR,
+    BUSINESS_ENTREPRENEURS,
+    TECH_WORKERS,
+]
+ALL_PARTIES = [VIHREAT, KOKOOMUS, VASEMMISTO, SDP, KESKUSTA, PERUSSUOMALAISET, RKP, KD]
 ALL_PARTICIPANTS = ALL_PARTIES + ALL_VOTERS
 
 # Proposals
@@ -267,14 +286,25 @@ def configure_scenes() -> Sequence[scene_lib.SceneSpec]:
         scene_lib.SceneSpec(
             scene_type=deliberation,
             participants=ALL_PARTICIPANTS,
-            num_rounds=7,  # One per participant
+            num_rounds=16,  # One per participant (8 parties + 8 voter segments)
             premise={
+                # Parties present their positions
                 VIHREAT: [f'{VIHREAT} is presenting Green positions: supports UBI but opposes Automation Tax as counterproductive'],
                 KOKOOMUS: [f'{KOKOOMUS} is presenting conservative positions: skeptical of both UBI and Automation Tax'],
                 VASEMMISTO: [f'{VASEMMISTO} is presenting left positions: strongly supports both UBI and Automation Tax'],
                 SDP: [f'{SDP} is presenting social democratic positions: prefers conditional benefits over UBI, cautiously open to automation tax'],
-                YOUNG_PROGRESSIVES: [f'{YOUNG_PROGRESSIVES} are listening to the debate on UBI and automation'],
-                OLDER_CONSERVATIVES: [f'{OLDER_CONSERVATIVES} are evaluating economic arguments'],
+                KESKUSTA: [f'{KESKUSTA} is presenting agrarian positions: prefers conditional models, skeptical of automation tax hurting rural areas'],
+                PERUSSUOMALAISET: [f'{PERUSSUOMALAISET} is presenting populist positions: opposes both UBI (benefits non-workers) and automation tax (harms industry)'],
+                RKP: [f'{RKP} is presenting moderate positions: moderately supports UBI for flexibility, neutral on automation tax'],
+                KD: [f'{KD} is presenting Christian democratic positions: opposes UBI (undermines work ethic), neutral on automation tax'],
+                # Voter segments listen and consider
+                YOUNG_URBAN_PROGRESSIVES: [f'{YOUNG_URBAN_PROGRESSIVES} are listening to the debate, interested in climate and innovation aspects'],
+                YOUNG_WORKING_CLASS: [f'{YOUNG_WORKING_CLASS} are evaluating which proposals actually help with jobs and housing'],
+                URBAN_PROFESSIONALS: [f'{URBAN_PROFESSIONALS} are weighing economic stability against reform benefits'],
+                RURAL_AGRICULTURAL: [f'{RURAL_AGRICULTURAL} are concerned about how these policies affect rural Finland'],
+                OLDER_MIDDLE_CLASS: [f'{OLDER_MIDDLE_CLASS} are evaluating fiscal responsibility and effects on pensions'],
+                PUBLIC_SECTOR: [f'{PUBLIC_SECTOR} are considering implications for public services and jobs'],
+                BUSINESS_ENTREPRENEURS: [f'{BUSINESS_ENTREPRENEURS} are assessing business impacts and regulatory burden'],
                 TECH_WORKERS: [f'{TECH_WORKERS} are considering how these proposals affect their industry'],
             },
         ),
@@ -282,7 +312,7 @@ def configure_scenes() -> Sequence[scene_lib.SceneSpec]:
         scene_lib.SceneSpec(
             scene_type=voting_ubi,
             participants=ALL_VOTERS,
-            num_rounds=3,  # One per voter
+            num_rounds=8,  # One per voter segment
             premise={
                 voter: [f'{voter} must now vote on the UBI Pilot proposal']
                 for voter in ALL_VOTERS
@@ -292,7 +322,7 @@ def configure_scenes() -> Sequence[scene_lib.SceneSpec]:
         scene_lib.SceneSpec(
             scene_type=voting_automation,
             participants=ALL_VOTERS,
-            num_rounds=3,  # One per voter
+            num_rounds=8,  # One per voter segment
             premise={
                 voter: [f'{voter} must now vote on the Automation Tax proposal']
                 for voter in ALL_VOTERS
@@ -315,11 +345,17 @@ def configure_scenes() -> Sequence[scene_lib.SceneSpec]:
 
 import re
 
-# Segment weights for future population-based weighting (equal for now)
+# Segment weights based on Finnish population proportions (literature-based estimates)
 SEGMENT_WEIGHTS = {
-    YOUNG_PROGRESSIVES: 1.0,
-    OLDER_CONSERVATIVES: 1.0,
-    TECH_WORKERS: 1.0,
+    YOUNG_URBAN_PROGRESSIVES: 0.15,    # 18-35, cities, educated
+    YOUNG_WORKING_CLASS: 0.10,         # 18-35, non-degree, precarious work
+    URBAN_PROFESSIONALS: 0.15,         # 35-55, cities, higher education
+    RURAL_AGRICULTURAL: 0.10,          # All ages, countryside, farming
+    OLDER_MIDDLE_CLASS: 0.18,          # 55+, homeowners, stable careers
+    PUBLIC_SECTOR: 0.12,               # All ages, government/municipal jobs
+    BUSINESS_ENTREPRENEURS: 0.08,      # SME owners, self-employed
+    TECH_WORKERS: 0.07,                # IT/software/AI sector
+    # Note: Remaining 5% unallocated (Swedish-speakers could be added later)
 }
 
 
@@ -563,22 +599,94 @@ def create_config(prefabs: dict) -> prefab_lib.Config:
                 ),
             },
         ),
+        prefab_lib.InstanceConfig(
+            prefab='party__Agent',
+            role=prefab_lib.Role.ENTITY,
+            params={
+                'name': KESKUSTA,
+                'policy_position': (
+                    'PREFERS conditional basic income over unconditional UBI. '
+                    'SKEPTICAL of Automation Tax - concerned about rural competitiveness.'
+                ),
+                'reasoning': (
+                    'Keskusta represents rural Finland and agricultural interests. '
+                    'We support social security reform but prefer targeted, conditional models. '
+                    'Unconditional UBI may not address rural employment challenges effectively. '
+                    'Automation tax could harm agricultural modernization and rural businesses. '
+                    'We need policies that work for all of Finland, not just urban areas.'
+                ),
+            },
+        ),
+        prefab_lib.InstanceConfig(
+            prefab='party__Agent',
+            role=prefab_lib.Role.ENTITY,
+            params={
+                'name': PERUSSUOMALAISET,
+                'policy_position': (
+                    'OPPOSES the UBI Pilot - too expensive, benefits non-workers. '
+                    'OPPOSES the Automation Tax - harms Finnish industry.'
+                ),
+                'reasoning': (
+                    'Perussuomalaiset prioritizes Finnish workers and taxpayers. '
+                    'UBI would benefit those who do not contribute to society. '
+                    'Money should go to hardworking Finns, not unconditional handouts. '
+                    'Automation tax would make Finnish companies less competitive globally. '
+                    'We need to protect Finnish jobs through immigration control, not new taxes.'
+                ),
+            },
+        ),
+        prefab_lib.InstanceConfig(
+            prefab='party__Agent',
+            role=prefab_lib.Role.ENTITY,
+            params={
+                'name': RKP,
+                'policy_position': (
+                    'MODERATELY SUPPORTS the UBI Pilot - good for flexibility. '
+                    'NEUTRAL on Automation Tax - needs more study.'
+                ),
+                'reasoning': (
+                    'RKP (Swedish People\'s Party) represents Finland\'s Swedish-speaking minority. '
+                    'We support pragmatic, evidence-based social policy. '
+                    'UBI could benefit coastal and bilingual communities with seasonal work. '
+                    'On automation tax, we need to balance innovation with social protection. '
+                    'Both proposals should consider regional and linguistic diversity.'
+                ),
+            },
+        ),
+        prefab_lib.InstanceConfig(
+            prefab='party__Agent',
+            role=prefab_lib.Role.ENTITY,
+            params={
+                'name': KD,
+                'policy_position': (
+                    'OPPOSES the UBI Pilot - undermines work ethic and family values. '
+                    'NEUTRAL on Automation Tax - concerned about implementation.'
+                ),
+                'reasoning': (
+                    'KD (Christian Democrats) emphasizes family values and personal responsibility. '
+                    'Unconditional basic income may weaken the dignity of work. '
+                    'We prefer support for families and those genuinely in need. '
+                    'Social policy should encourage work, not replace it. '
+                    'Automation tax is complex - we need to protect workers without harming economy.'
+                ),
+            },
+        ),
 
-        # Voter segment agents
+        # Voter segment agents (8 demographic groups)
         prefab_lib.InstanceConfig(
             prefab='voter_segment__Agent',
             role=prefab_lib.Role.ENTITY,
             params={
-                'name': YOUNG_PROGRESSIVES,
+                'name': YOUNG_URBAN_PROGRESSIVES,
                 'demographics': (
-                    'Young adults (18-35), urban, educated, many in precarious '
-                    'employment (freelance, gig economy, startups). Value innovation '
-                    'and social justice.'
+                    'Young adults (18-35), urban, university-educated. '
+                    'Many in creative industries, freelance, or startups. '
+                    'Helsinki, Tampere, Turku metropolitan areas.'
                 ),
                 'priorities': (
-                    'Economic security without bureaucratic hoops. Freedom to pursue '
-                    'education, entrepreneurship, and creative work. Climate action. '
-                    'Modern social safety net. Skeptical of measures that slow innovation.'
+                    'Climate action and environmental policy. Social justice and equality. '
+                    'Modern social safety net without bureaucracy. Freedom to pursue '
+                    'education and creative work. Innovation-friendly policies.'
                 ),
             },
         ),
@@ -586,16 +694,101 @@ def create_config(prefabs: dict) -> prefab_lib.Config:
             prefab='voter_segment__Agent',
             role=prefab_lib.Role.ENTITY,
             params={
-                'name': OLDER_CONSERVATIVES,
+                'name': YOUNG_WORKING_CLASS,
                 'demographics': (
-                    'Middle-aged and older (45+), mix of urban and rural, '
-                    'many homeowners with stable employment or retirement. '
-                    'Value stability and fiscal responsibility.'
+                    'Young adults (18-35), vocational education or no degree. '
+                    'Service sector, retail, logistics, construction workers. '
+                    'Mix of urban and smaller cities. Often precarious employment.'
                 ),
                 'priorities': (
-                    'Fiscal sustainability. Fair taxation. Maintaining work ethic. '
-                    'Protecting earned benefits. Skeptical of radical changes to '
-                    'the social contract. Concerned about job losses to automation.'
+                    'Affordable housing. Job security and fair wages. '
+                    'Skeptical of elites and establishment politicians. '
+                    'Practical economic help, not abstract policy debates.'
+                ),
+            },
+        ),
+        prefab_lib.InstanceConfig(
+            prefab='voter_segment__Agent',
+            role=prefab_lib.Role.ENTITY,
+            params={
+                'name': URBAN_PROFESSIONALS,
+                'demographics': (
+                    'Middle-aged adults (35-55), cities, higher education. '
+                    'Private sector managers, specialists, consultants. '
+                    'Established careers, often with families and mortgages.'
+                ),
+                'priorities': (
+                    'Economic stability and growth. Quality public services. '
+                    'Moderate reforms, not radical changes. Work-life balance. '
+                    'Good schools and healthcare for families.'
+                ),
+            },
+        ),
+        prefab_lib.InstanceConfig(
+            prefab='voter_segment__Agent',
+            role=prefab_lib.Role.ENTITY,
+            params={
+                'name': RURAL_AGRICULTURAL,
+                'demographics': (
+                    'All ages, countryside and small towns. Farmers, forestry workers, '
+                    'rural entrepreneurs. Strong regional identity. '
+                    'Particularly in Central and Eastern Finland.'
+                ),
+                'priorities': (
+                    'Agricultural subsidies and rural development. Regional equality. '
+                    'Traditional values and community. Skeptical of Helsinki-centric policies. '
+                    'Infrastructure and services for rural areas.'
+                ),
+            },
+        ),
+        prefab_lib.InstanceConfig(
+            prefab='voter_segment__Agent',
+            role=prefab_lib.Role.ENTITY,
+            params={
+                'name': OLDER_MIDDLE_CLASS,
+                'demographics': (
+                    'Older adults (55+), homeowners, stable careers or retired. '
+                    'Mix of urban and suburban. Built wealth during Finland\'s '
+                    'economic growth period. Many receive or will soon receive pensions.'
+                ),
+                'priorities': (
+                    'Pension security and healthcare. Fiscal responsibility. '
+                    'Maintaining earned benefits. Skeptical of radical changes. '
+                    'Concerned about both welfare costs AND job losses to automation.'
+                ),
+            },
+        ),
+        prefab_lib.InstanceConfig(
+            prefab='voter_segment__Agent',
+            role=prefab_lib.Role.ENTITY,
+            params={
+                'name': PUBLIC_SECTOR,
+                'demographics': (
+                    'Government employees, municipal workers, healthcare staff, teachers. '
+                    'All ages, mix of education levels. Job security through public employment. '
+                    'Often unionized.'
+                ),
+                'priorities': (
+                    'Public sector wages and working conditions. Strong public services. '
+                    'Job security and worker rights. Skeptical of privatization. '
+                    'Support for welfare state institutions.'
+                ),
+            },
+        ),
+        prefab_lib.InstanceConfig(
+            prefab='voter_segment__Agent',
+            role=prefab_lib.Role.ENTITY,
+            params={
+                'name': BUSINESS_ENTREPRENEURS,
+                'demographics': (
+                    'SME owners, self-employed professionals, entrepreneurs. '
+                    'Mix of ages and locations. Often personally invested in their businesses. '
+                    'Employ themselves and often others.'
+                ),
+                'priorities': (
+                    'Low taxes and reduced regulation. Business-friendly policies. '
+                    'Flexibility in hiring and employment. Oppose policies that increase costs. '
+                    'Economic freedom and market competition.'
                 ),
             },
         ),
@@ -605,14 +798,14 @@ def create_config(prefabs: dict) -> prefab_lib.Config:
             params={
                 'name': TECH_WORKERS,
                 'demographics': (
-                    'Software developers, AI researchers, startup founders, IT professionals. '
-                    'Generally high income, urban, well-educated. Work directly with '
-                    'automation technologies.'
+                    'Software developers, AI researchers, IT professionals. '
+                    'High income, urban, well-educated. Work directly with '
+                    'automation technologies. Strong international orientation.'
                 ),
                 'priorities': (
                     'Innovation and technological progress. Competitive tech sector. '
-                    'Oppose regulation that hampers AI development. Support economic security '
-                    'measures that do not target their industry specifically.'
+                    'Oppose regulation targeting AI/automation. Support economic security '
+                    'measures that do not single out their industry.'
                 ),
             },
         ),
@@ -645,14 +838,13 @@ def create_config(prefabs: dict) -> prefab_lib.Config:
                 ],
                 # Real facts instead of AI-generated fictional backstories
                 'player_specific_memories': {
-                    # Party agents - real historical facts
+                    # Party agents - real historical facts (8 parties)
                     VIHREAT: [
                         'Vihreät (Green League) was founded in 1987 from the environmental movement.',
                         'The party supported Finland\'s 2017-2018 UBI experiment.',
                         'Core values: environmental protection, social justice, individual freedom.',
                         'Has been in government coalitions multiple times since 1995.',
                         'Opposes automation taxes as counterproductive - prefers carbon taxes and dividend taxes.',
-                        'Argues automation has been replacing human work for 500 years without needing special taxes.',
                     ],
                     KOKOOMUS: [
                         'Kokoomus (National Coalition Party) founded 1918, center-right conservative.',
@@ -666,40 +858,98 @@ def create_config(prefabs: dict) -> prefab_lib.Config:
                         'Advocates for workers\' rights, wealth redistribution, and strong public services.',
                         'Recently proposed "AI tax" / automation tax to fund welfare.',
                         'Strongly supports UBI as protection for workers displaced by automation.',
-                        'Argues corporations must share productivity gains from AI with society.',
                     ],
                     SDP: [
                         'SDP (Social Democrats) founded 1899, Finland\'s oldest party.',
                         'Historically pro-labor but pragmatic, balancing worker interests with economic growth.',
                         'Prefers "participation income" (conditional basic income) over unconditional UBI.',
-                        'Proposed conditional model with activity requirements in 2019.',
                         'Cautiously open to automation tax but concerned about competitiveness.',
                         'Has led many Finnish governments, including during the Nordic welfare state expansion.',
                     ],
-                    # Voter segments - group descriptions (NOT individual stories)
-                    YOUNG_PROGRESSIVES: [
-                        'Young Progressive Voters are a demographic segment of Finnish voters aged 18-35.',
-                        'This group includes urban professionals, students, freelancers, and startup workers.',
-                        'Many entered job market during economic uncertainty (2008 crisis, COVID pandemic).',
-                        'Tend to support climate action, social innovation, and modern welfare policies.',
-                        'Generally tech-savvy but divided on whether automation tax helps or hurts innovation.',
-                        'Value economic security but skeptical of measures that slow technological progress.',
+                    KESKUSTA: [
+                        'Keskusta (Centre Party) founded 1906, historically agrarian party.',
+                        'Represents rural Finland, farmers, and regional interests.',
+                        'Supports decentralization and regional equality.',
+                        'Prefers conditional, targeted social policy over universal programs.',
+                        'Skeptical of automation tax impacting rural businesses and agriculture.',
                     ],
-                    OLDER_CONSERVATIVES: [
-                        'Older Conservative Voters are a demographic segment of Finnish voters aged 45+.',
-                        'This group includes homeowners, retirees, and established professionals.',
-                        'Built careers during Finland\'s economic growth and EU membership period.',
-                        'Prioritize fiscal responsibility, stability, and earned benefits.',
-                        'Concerned about both welfare costs AND job losses to automation.',
-                        'Skeptical of radical changes to the social contract.',
+                    PERUSSUOMALAISET: [
+                        'Perussuomalaiset (Finns Party) emerged from True Finns in 2017 split.',
+                        'Right-wing populist party emphasizing Finnish identity and sovereignty.',
+                        'Critical of immigration, EU integration, and establishment politics.',
+                        'Supports Finnish workers but skeptical of "handouts" to non-workers.',
+                        'Opposes regulations that harm Finnish industry competitiveness.',
+                    ],
+                    RKP: [
+                        'RKP (Swedish People\'s Party) represents Finland\'s Swedish-speaking minority (5%).',
+                        'Centrist, liberal party focused on language rights and bilingual services.',
+                        'Often participates in government coalitions regardless of left-right axis.',
+                        'Pragmatic on economic policy, supports evidence-based reforms.',
+                        'Coastal and urban base, strong in Ostrobothnia and Helsinki region.',
+                    ],
+                    KD: [
+                        'KD (Christian Democrats) founded 1958, emphasizes Christian values.',
+                        'Center-right on economics, conservative on social issues.',
+                        'Supports family values, traditional marriage, and pro-life positions.',
+                        'Skeptical of secularization and moral relativism.',
+                        'Prefers targeted welfare supporting families over universal programs.',
+                    ],
+                    # Voter segments - group descriptions (8 segments)
+                    YOUNG_URBAN_PROGRESSIVES: [
+                        'Young Urban Progressives are Finnish voters aged 18-35 in major cities.',
+                        'University-educated, often in creative industries, startups, or freelance work.',
+                        'Entered job market during economic uncertainty (2008 crisis, COVID).',
+                        'Support climate action, social innovation, and modern welfare policies.',
+                        'Tech-savvy but divided on whether automation tax helps or hurts innovation.',
+                    ],
+                    YOUNG_WORKING_CLASS: [
+                        'Young Working Class are Finnish voters aged 18-35 without university degrees.',
+                        'Work in service sector, retail, logistics, construction, or manufacturing.',
+                        'Often face precarious employment - temp contracts, gig work, low wages.',
+                        'Skeptical of establishment politicians and elite-focused policies.',
+                        'Prioritize affordable housing, job security, and practical economic help.',
+                    ],
+                    URBAN_PROFESSIONALS: [
+                        'Urban Professionals are middle-aged (35-55) city dwellers with higher education.',
+                        'Work as managers, specialists, consultants in private sector.',
+                        'Established careers, mortgages, often raising families.',
+                        'Value economic stability, quality public services, and moderate reform.',
+                        'Pragmatic voters who weigh costs and benefits carefully.',
+                    ],
+                    RURAL_AGRICULTURAL: [
+                        'Rural and Agricultural Voters live in countryside and small towns.',
+                        'Include farmers, forestry workers, and rural entrepreneurs.',
+                        'Strong regional identity, particularly in Central and Eastern Finland.',
+                        'Support agricultural subsidies, regional development, and local services.',
+                        'Skeptical of Helsinki-centric policies that ignore rural needs.',
+                    ],
+                    OLDER_MIDDLE_CLASS: [
+                        'Older Middle Class are Finnish voters aged 55+ with stable backgrounds.',
+                        'Homeowners who built wealth during Finland\'s growth period (1980s-2000s).',
+                        'Many are retired or approaching retirement, dependent on pensions.',
+                        'Prioritize fiscal responsibility, healthcare, and pension security.',
+                        'Skeptical of radical changes that could affect their earned benefits.',
+                    ],
+                    PUBLIC_SECTOR: [
+                        'Public Sector Workers are employed by government or municipalities.',
+                        'Include healthcare workers, teachers, civil servants, and municipal staff.',
+                        'Often unionized with collective bargaining agreements.',
+                        'Support strong public services and worker rights.',
+                        'Skeptical of privatization or policies that threaten public sector jobs.',
+                    ],
+                    BUSINESS_ENTREPRENEURS: [
+                        'Business and Entrepreneurs include SME owners and self-employed.',
+                        'Personally invested in their businesses, often employing others.',
+                        'Value economic freedom, low taxes, and reduced regulation.',
+                        'Oppose policies that increase labor costs or administrative burden.',
+                        'Support market competition and business-friendly government.',
                     ],
                     TECH_WORKERS: [
-                        'Tech Industry Workers are professionals in software, AI, and IT sectors.',
-                        'Finland has a strong tech sector (Nokia legacy, gaming industry, startups).',
-                        'Work directly with automation technologies - understand both benefits and disruptions.',
-                        'Generally oppose regulations specifically targeting their industry.',
-                        'May support UBI as it benefits gig economy workers, but strongly oppose automation tax.',
-                        'See automation tax as punishing innovation rather than solving inequality.',
+                        'Tech Industry Workers are professionals in software, AI, and IT.',
+                        'High income, urban, well-educated, often with international experience.',
+                        'Work directly with automation technologies.',
+                        'Oppose regulations specifically targeting their industry.',
+                        'May support UBI but strongly oppose automation tax as punishing innovation.',
                     ],
                 },
             },
@@ -710,12 +960,13 @@ def create_config(prefabs: dict) -> prefab_lib.Config:
         default_premise=(
             'Finland is holding a policy referendum on two proposals: '
             f'(1) {UBI_PROPOSAL}, and (2) {AUTOMATION_TAX}. '
-            'Political parties are making their cases to voters. '
-            'Interestingly, the Greens and conservatives both oppose the Automation Tax, '
-            'while only the Left Alliance supports both measures. '
-            'Each vote will determine whether the policy has a democratic mandate.'
+            'All 8 major Finnish parties are presenting their positions to 8 voter segments. '
+            'The political spectrum is complex: Vihreät and Kokoomus both oppose Automation Tax (for different reasons), '
+            'while Vasemmisto alone supports both measures. SDP and Keskusta prefer conditional models. '
+            'PS and KD oppose UBI. RKP takes a moderate middle ground. '
+            'Each voter segment will vote based on their priorities and how the debate affects them.'
         ),
-        default_max_steps=50,  # More steps for multi-proposal voting
+        default_max_steps=100,  # More steps for 8 parties + 8 segments + 2 votes
         prefabs=prefabs,
         instances=instances,
     )
@@ -817,7 +1068,7 @@ def main():
 
     raw_log = []
     try:
-        results_html = sim.play(max_steps=50, raw_log=raw_log)
+        results_html = sim.play(max_steps=100, raw_log=raw_log)
     except RuntimeError as e:
         if "Counter state" in str(e) and "max number of rounds" in str(e):
             # Concordia scene_tracker bug - simulation completed, just termination issue
