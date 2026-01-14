@@ -40,7 +40,7 @@ The mechanics shift accordingly:
 
 - **Cross-party agreement becomes visible.** If multiple parties include the same policy in their programs, that policy accumulates support from voters across traditional boundaries. Consensus positions gain strength rather than being obscured by partisan framing.
 
-- **Mandates are specific.** "65% of voters supported universal basic income" is a clearer mandate than "Party X won with 35% of the vote." Representatives know exactly what they've been elected to implement.
+- **Mandates are specific.** "47% support UBI pilot, with young voters at 62% and older voters at 29%" is clearer than "Party X won with 35% of the vote." Representatives know exactly what they've been elected to implement—and where support is strongest.
 
 - **Accountability is traceable.** Did the policy get implemented? Public dashboards can track legislative outcomes against the mandate. Deviation requires justification.
 
@@ -88,7 +88,7 @@ Voting for individual representatives could still be possible—it just wouldn't
 
 ### After the Election
 
-The results create specific mandates: "UBI proposal received 62% support."
+The results create specific mandates: "UBI proposal received 47% support, carbon tax 54%."
 
 **Parliament composition** would be determined primarily by how policies performed—representatives who championed winning policies gain seats. When multiple candidates have similar policy support (common within the same party), person-votes serve as the tiebreaker to decide who actually gets elected. Policy votes remain primary; candidate votes are secondary, resolving ties rather than driving outcomes.
 
@@ -117,21 +117,21 @@ Imagine how the same policy environment might function under PolicyVote. ([Full 
 **Deliberation phase** might reveal that the population isn't neatly divided into "pro-UBI" and "anti-UBI" camps. A substantial middle could exist—people open to various reform models. Consensus might emerge on problems (bureaucracy, poverty traps) even where solutions differ.
 
 **Voting phase** would produce specific results. Imagine something like:
-- A conditional basic income model receives moderate positive support
-- A UBI pilot proposal receives weaker but still positive support
-- Status quo options receive net negative support
+- A UBI pilot proposal receives 47% support—not a landslide, but a plurality
+- A conditional basic income model receives similar support from partially overlapping voters
+- Status quo options receive weaker support
 
-**Key insight**: Suppose roughly a third of voters support *both* a conditional model and a UBI pilot—they want reform but are flexible on the form. Under the current system, this substantial middle is invisible, split across party votes. Under PolicyVote, it would become a clear mandate for some form of basic income reform.
+**Key insight**: The vote reveals that opinion is genuinely divided—but also shows *where* the divisions lie. Different demographic groups have different concerns: young progressives strongly support UBI, older middle class is skeptical, public sector workers are split. Under the current system, this nuance is invisible. Under PolicyVote, parliament knows exactly which groups support what, enabling targeted implementation or further deliberation on contested elements.
 
-**The mandate** would be specific: implement the reform model with strongest support. Parliament knows exactly what citizens voted for. A transparency dashboard tracks implementation. Accountability becomes concrete.
+**The mandate** is specific but honest: "47% support UBI pilot, with strongest backing from young voters and weakest from older demographics." Parliament can proceed knowing the actual distribution of opinion, not just which party won.
 
 ### What Changes
 
 | Aspect | Current System | PolicyVote |
 |--------|---------------|------------|
-| Mandate | "Party X got 10%" | "Majority supports reform model Y" |
+| Mandate | "Party X got 10%" | "47% support UBI, strongest among young voters" |
 | Cross-party support | Hidden in party bundles | Visible and actionable |
-| Coalition leverage | UBI tradeable for other priorities | Mandate exists regardless of coalition |
+| Coalition leverage | UBI tradeable for other priorities | Mandate clarity regardless of coalition |
 | Accountability | "Party broke promises" | Dashboard tracks specific implementation |
 
 This thought experiment is illustrative, not predictive. Real dynamics would differ. But it demonstrates how structural change affects which questions get asked and which answers become possible.
